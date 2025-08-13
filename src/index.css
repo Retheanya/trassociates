@@ -2,41 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Architectural Design System - Monochrome & Neutral Palette */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core architectural colors */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+    --content-bg: 0 0% 100%;
+    --content-light: 0 0% 96%;
 
+    /* Architectural neutrals */
+    --arch-black: 0 0% 8%;
+    --arch-dark: 0 0% 15%;
+    --arch-medium: 0 0% 45%;
+    --arch-light: 0 0% 85%;
+    --arch-accent: 0 0% 25%;
+
+    /* Component colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 0% 25%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 94%;
+    --ring: 0 0% 8%;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
+
+    /* Architectural spacing system */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* Transitions for micro-interactions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slide: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +121,46 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Architectural typography */
+  .arch-heading {
+    @apply text-arch-black font-light tracking-wide leading-tight;
+    font-weight: 300;
+  }
+
+  .arch-title {
+    @apply text-arch-black font-extralight tracking-wider leading-none;
+    font-weight: 200;
+  }
+
+  .arch-body {
+    @apply text-arch-medium font-light tracking-wide leading-relaxed;
+    font-weight: 300;
+  }
+
+  /* Architectural spacing utilities */
+  .arch-container {
+    @apply max-w-none;
+  }
+
+  /* Smooth transitions for micro-interactions */
+  .arch-transition {
+    transition: var(--transition-smooth);
+  }
+
+  .arch-transition-slow {
+    transition: var(--transition-slow);
+  }
+
+  /* Subtle accent lines */
+  .arch-line {
+    @apply w-12 h-px bg-arch-accent;
+  }
+
+  .arch-line-vertical {
+    @apply w-px h-12 bg-arch-accent;
   }
 }

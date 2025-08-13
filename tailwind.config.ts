@@ -24,6 +24,16 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				/* Architectural color system */
+				'content-bg': 'hsl(var(--content-bg))',
+				'content-light': 'hsl(var(--content-light))',
+				'arch-black': 'hsl(var(--arch-black))',
+				'arch-dark': 'hsl(var(--arch-dark))',
+				'arch-medium': 'hsl(var(--arch-medium))',
+				'arch-light': 'hsl(var(--arch-light))',
+				'arch-accent': 'hsl(var(--arch-accent))',
+
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -62,6 +72,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			spacing: {
+				'xs': 'var(--spacing-xs)',
+				'sm': 'var(--spacing-sm)', 
+				'md': 'var(--spacing-md)',
+				'lg': 'var(--spacing-lg)',
+				'xl': 'var(--spacing-xl)',
+			},
+			fontWeight: {
+				'extralight': '200',
+				'light': '300',
+			},
+			letterSpacing: {
+				'wider': '0.1em',
+				'widest': '0.2em',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

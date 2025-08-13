@@ -1,0 +1,157 @@
+import { useState, useEffect } from 'react';
+import { ChevronUp, ChevronDown } from 'lucide-react';
+import archInterior1 from '@/assets/arch-interior-1.jpg';
+import archExterior1 from '@/assets/arch-exterior-1.jpg';
+import archConcept1 from '@/assets/arch-concept-1.jpg';
+import archInterior2 from '@/assets/arch-interior-2.jpg';
+
+const slides = [
+  {
+    id: 1,
+    image: archInterior1,
+    title: 'Minimalist Interior',
+    type: 'Interior Design'
+  },
+  {
+    id: 2,
+    image: archExterior1,
+    title: 'Contemporary Facade',
+    type: 'Exterior Design'
+  },
+  {
+    id: 3,
+    image: archConcept1,
+    title: 'Conceptual Form',
+    type: 'Concept Design'
+  },
+  {
+    id: 4,
+    image: archInterior2,
+    title: 'Residential Space',
+    type: 'Interior Design'
+  }
+];
+
+export const ImageSlider = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const nextSlide = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index: number) => {
+    if (isTransitioning || index === currentSlide) return;
+    setIsTransitioning(true);
+    setCurrentSlide(index);
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsTransitioning(false);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, [currentSlide]);
+
+  // Auto-advance slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isTransitioning) {
+        nextSlide();
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isTransitioning]);
+
+  return (
+    <div className="relative h-screen w-full overflow-hidden bg-arch-black">
+      {/* Image Container */}
+      <div className="relative h-full w-full">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 transition-opacity duration-800 ease-out ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-arch-black/20" />
+          </div>
+        ))}
+      </div>
+
+      {/* Navigation Controls */}
+      <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-4">
+        <button
+          onClick={prevSlide}
+          className="group p-2 text-white/70 hover:text-white arch-transition disabled:opacity-50"
+          disabled={isTransitioning}
+        >
+          <ChevronUp className="h-5 w-5" />
+        </button>
+        
+        {/* Page Indicators */}
+        <div className="flex flex-col space-y-3">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className="group flex items-center"
+              disabled={isTransitioning}
+            >
+              <div className="flex items-center space-x-2">
+                <div
+                  className={`h-px transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'w-8 bg-white'
+                      : 'w-4 bg-white/50 group-hover:bg-white/70'
+                  }`}
+                />
+                <span
+                  className={`text-xs font-light transition-colors duration-300 ${
+                    index === currentSlide
+                      ? 'text-white'
+                      : 'text-white/50 group-hover:text-white/70'
+                  }`}
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        <button
+          onClick={nextSlide}
+          className="group p-2 text-white/70 hover:text-white arch-transition disabled:opacity-50"
+          disabled={isTransitioning}
+        >
+          <ChevronDown className="h-5 w-5" />
+        </button>
+      </div>
+
+      {/* Slide Info Overlay */}
+      <div className="absolute bottom-8 left-8 text-white">
+        <div className="arch-line mb-4" />
+        <p className="text-sm font-light tracking-wider uppercase text-white/70 mb-1">
+          {slides[currentSlide].type}
+        </p>
+        <h3 className="text-lg font-light tracking-wide">
+          {slides[currentSlide].title}
+        </h3>
+      </div>
+    </div>
+  );
+};
