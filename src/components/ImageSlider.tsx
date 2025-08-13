@@ -79,7 +79,7 @@ export const ImageSlider = () => {
           <div
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-800 ease-out ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+              index === currentSlide ? 'opacity-100 animate-scale-in' : 'opacity-0'
             }`}
           >
             <img

@@ -14,26 +14,26 @@ export const ContentPanel = () => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="arch-title text-5xl lg:text-6xl xl:text-7xl mb-6">
+        <h1 className="arch-title text-5xl lg:text-6xl xl:text-7xl mb-6 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
           Minimal
           <br />
           Architecture
         </h1>
 
         {/* Subheading */}
-        <h2 className="arch-heading text-xl lg:text-2xl text-arch-accent mb-8">
+        <h2 className="arch-heading text-xl lg:text-2xl text-arch-accent mb-8 animate-slide-in-left" style={{ animationDelay: '400ms' }}>
           Contemporary Design Studio
         </h2>
 
         {/* Description */}
-        <p className="arch-body text-base lg:text-lg mb-12 max-w-md">
+        <p className="arch-body text-base lg:text-lg mb-12 max-w-md animate-fade-in-up" style={{ animationDelay: '600ms' }}>
           Creating spaces that blend functionality with aesthetic excellence. 
           Our architectural approach emphasizes clean lines, natural materials, 
           and the harmony between form and environment.
         </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-16">
+        <div className="flex flex-col sm:flex-row gap-6 mb-16 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
           <Button variant="arch" size="arch">
             View Projects
             <ArrowRight className="ml-2 h-4 w-4" />
