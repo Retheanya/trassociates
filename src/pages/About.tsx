@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import archExterior1 from '@/assets/arch-exterior-1.jpg';
 import archInterior1 from '@/assets/arch-interior-1.jpg';
@@ -199,6 +200,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

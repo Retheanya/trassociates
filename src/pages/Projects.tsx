@@ -1,5 +1,6 @@
 import { Navigation } from '@/components/Navigation';
 import { ProjectsSection } from '@/components/ProjectsSection';
+import { Footer } from '@/components/Footer';
 import archInterior1 from '@/assets/arch-interior-1.jpg';
 
 const Projects = () => {
@@ -29,6 +30,8 @@ const Projects = () => {
 
       {/* Projects Section */}
       <ProjectsSection />
+
+      <Footer />
     </div>
   );
 };

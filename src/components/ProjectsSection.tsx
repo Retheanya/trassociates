@@ -95,7 +95,11 @@ export const ProjectsSection = () => {
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-arch-black/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Button variant="arch" size="arch">
+                  <Button 
+                    variant="arch" 
+                    size="arch"
+                    onClick={() => window.location.href = `/projects/${project.id}`}
+                  >
                     VIEW PROJECT
                   </Button>
                 </div>

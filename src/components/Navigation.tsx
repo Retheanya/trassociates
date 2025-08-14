@@ -9,6 +9,7 @@ export const Navigation = () => {
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
     { label: 'Clients', href: '/clients' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -16,12 +17,16 @@ export const Navigation = () => {
       <div className="flex items-center justify-between px-8 py-6">
         {/* Logo */}
         <a href='/'>
-        <div className="flex items-center space-x-4" >
-          <div className="arch-line-vertical" />
-          <h1 className="text-xl font-extralight tracking-widest text-arch-black">
-            TR Associates
-          </h1>
-        </div>
+          <div className="flex items-center space-x-4">
+            <img 
+              src="/lovable-uploads/5544ea7d-e270-4c60-a5ed-eadbd2c1a17c.png" 
+              alt="TR Associates" 
+              className="h-8 w-8 object-contain"
+            />
+            <h1 className="text-xl font-extralight tracking-widest text-arch-black">
+              TR Associates
+            </h1>
+          </div>
         </a>
 
         {/* Desktop Navigation */}

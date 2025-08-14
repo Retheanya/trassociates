@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
 import { ExternalLink } from 'lucide-react';
 
 // Using placeholder logos as the original client logos aren't available
@@ -144,6 +145,8 @@ const Clients = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

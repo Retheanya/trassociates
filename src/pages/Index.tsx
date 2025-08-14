@@ -3,6 +3,7 @@ import { ImageSlider } from '@/components/ImageSlider';
 import { ContentPanel } from '@/components/ContentPanel';
 import { HeroSlider } from '@/components/HeroSlider';
 import { ProjectsSection } from '@/components/ProjectsSection';
+import { Footer } from '@/components/Footer';
 
 const Index = () => {
   return (
@@ -27,6 +28,8 @@ const Index = () => {
 
       {/* Projects Section */}
       <ProjectsSection />
+
+      <Footer />
     </div>
   );
 };

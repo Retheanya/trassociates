@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import archConcept1 from '@/assets/arch-concept-1.jpg';
 import archInterior2 from '@/assets/arch-interior-2.jpg';
@@ -138,6 +139,8 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
