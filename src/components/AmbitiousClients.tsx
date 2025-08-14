@@ -14,7 +14,7 @@ export const AmbitiousClients = () => {
     <section 
       className="relative py-32 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/ad722359-5950-4909-93ab-9ac4f0c8c2ee.png')`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/uploads/clientsbg.jpg')`
       }}
     >
       <div className="container mx-auto px-6">

@@ -20,7 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         // Architectural button variants
         arch: "bg-arch-black text-white font-light tracking-wider uppercase text-xs px-8 py-4 hover:bg-arch-dark arch-transition border-none",
-        "arch-outline": "border border-arch-black text-arch-black bg-transparent font-light tracking-wider uppercase text-xs px-8 py-4 hover:bg-arch-black hover:text-white arch-transition",
+        "arch-outline": "border border-arch-white text-arch-white bg-transparent font-light tracking-wider uppercase text-xs px-8 py-4 hover:bg-arch-black hover:text-white arch-transition",
         "arch-minimal": "text-arch-black font-light tracking-wide underline-offset-4 hover:text-arch-accent arch-transition p-0 h-auto",
       },
       size: {

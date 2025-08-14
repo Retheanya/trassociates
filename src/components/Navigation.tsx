@@ -19,7 +19,7 @@ export const Navigation = () => {
         <a href='/'>
           <div className="flex items-center space-x-4">
             <img 
-              src="/lovable-uploads/5544ea7d-e270-4c60-a5ed-eadbd2c1a17c.png" 
+              src="/uploads/5544ea7d-e270-4c60-a5ed-eadbd2c1a17c.png" 
               alt="TR Associates" 
               className="h-8 w-8 object-contain"
             />

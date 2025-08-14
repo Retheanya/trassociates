@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Users, Lightbulb, Layers } from 'lucide-react';
-
+import heroSlide1 from '@/assets/hero-slide-1.jpg';
+import heroSlide2 from '@/assets/hero-slide-2.jpg';
 const services = [
   {
     icon: Users,
@@ -24,7 +25,7 @@ export const ServicesSection = () => {
     <section 
       className="relative py-32 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/95807c52-0bd6-45f8-993f-c17c64093047.png')`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/uploads/servicebg.jpg')`
       }}
     >
       <div className="container mx-auto px-6">
