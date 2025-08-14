@@ -1,9 +1,9 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const navItems = [
     { label: 'Projects', href: '/projects' },
     { label: 'About', href: '/about' },
@@ -15,12 +15,14 @@ export const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-content-bg/95 backdrop-blur-sm border-b border-arch-light/50">
       <div className="flex items-center justify-between px-8 py-6">
         {/* Logo */}
-        <div className="flex items-center space-x-4">
+        <a href='/'>
+        <div className="flex items-center space-x-4" >
           <div className="arch-line-vertical" />
           <h1 className="text-xl font-extralight tracking-widest text-arch-black">
-            ARCH STUDIO
+            TR Associates
           </h1>
         </div>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-12">
