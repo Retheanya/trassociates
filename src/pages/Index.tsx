@@ -3,6 +3,9 @@ import { ImageSlider } from '@/components/ImageSlider';
 import { ContentPanel } from '@/components/ContentPanel';
 import { HeroSlider } from '@/components/HeroSlider';
 import { ProjectsSection } from '@/components/ProjectsSection';
+import { ServicesSection } from '@/components/ServicesSection';
+import { AmbitiousClients } from '@/components/AmbitiousClients';
+import { AwardsSection } from '@/components/AwardsSection';
 import { Footer } from '@/components/Footer';
 
 const Index = () => {
@@ -28,6 +31,15 @@ const Index = () => {
 
       {/* Projects Section */}
       <ProjectsSection />
+
+      {/* Services Section */}
+      <ServicesSection />
+
+      {/* Ambitious Clients Section */}
+      <AmbitiousClients />
+
+      {/* Awards Section */}
+      <AwardsSection />
 
       <Footer />
     </div>
