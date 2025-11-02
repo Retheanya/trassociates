@@ -1,43 +1,74 @@
+import { useState } from 'react';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import { EnquiryDialog } from '@/components/EnquiryDialog';
 import archConcept1 from '@/assets/arch-concept-1.jpg';
 import archInterior2 from '@/assets/arch-interior-2.jpg';
+import { Building2, HardHat, FileText, MapPin, TestTube, Home, Shield, Factory, ClipboardCheck, DollarSign } from 'lucide-react';
 
 const services = [
   {
-    title: 'Planning',
-    description: 'Our master plans provide a comprehensive look at where an organization is today.',
-    link: '/planning'
+    icon: Building2,
+    title: 'RCC Design Detailing Services',
+    description: 'Comprehensive RCC design and detailing services for residential and commercial structures with precise calculations and compliance.',
   },
   {
-    title: 'Interior',
-    description: 'You may engage your architect to provide an interior design service, advising on loose furniture.',
-    link: '/interior'
+    icon: HardHat,
+    title: 'Steel Detailing Services',
+    description: 'Professional steel detailing and structural engineering services for industrial projects with advanced 3D modeling.',
   },
   {
-    title: 'Exterior',
-    description: 'Working together with your architect, you will share your project needs, dreams and goals.',
-    link: '/exterior'
+    icon: FileText,
+    title: 'Import Export License Consultants',
+    description: 'Expert consultation for import-export licensing and regulatory compliance with government agencies.',
   },
   {
-    title: 'Restoration',
-    description: 'Describes a particular treatment approach and philosophy within the field of architectural conservation',
-    link: '/restoration'
+    icon: MapPin,
+    title: 'Land Surveyors',
+    description: 'Accurate land surveying services using advanced technology and methodologies for precise measurements.',
   },
   {
-    title: 'Building',
-    description: 'When the design concepts have been decided, the architect prepares working drawings and specifications.',
-    link: '/building'
+    icon: TestTube,
+    title: 'Soil Testing',
+    description: 'Comprehensive soil analysis and testing for construction site preparation and foundation design.',
   },
   {
-    title: 'Consultation',
-    description: 'We provide expert consultation services for all phases of architectural development.',
-    link: '/consultation'
-  }
+    icon: Home,
+    title: 'Building Plan',
+    description: 'Complete building planning and architectural design services from concept to construction documentation.',
+  },
+  {
+    icon: Shield,
+    title: 'Structural Stability Certificates',
+    description: 'Official structural stability certification and compliance documentation for existing and new structures.',
+  },
+  {
+    icon: Factory,
+    title: 'Industrial Structural Designing',
+    description: 'Specialized structural design services for industrial and manufacturing facilities including heavy equipment support.',
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'Assessment of Structural Stability & Soundness',
+    description: 'Thorough assessment of structural stability and soundness of existing buildings with detailed reports.',
+  },
+  {
+    icon: DollarSign,
+    title: 'Property Valuers',
+    description: 'Professional property valuation services for residential and commercial properties with market analysis.',
+  },
 ];
 
 const Services = () => {
+  const [enquiryOpen, setEnquiryOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<string>('');
+
+  const handleEnquiry = (serviceName: string) => {
+    setSelectedService(serviceName);
+    setEnquiryOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -103,7 +134,7 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in-up">
             <p className="text-sm font-light tracking-widest uppercase text-arch-medium mb-4">
-              SERVICES
+              OUR SERVICES INCLUDE
             </p>
             <h2 className="text-4xl md:text-5xl font-light tracking-wide text-arch-black">
               This is what we do.
@@ -111,36 +142,41 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {services.map((service, index) => (
-              <div 
-                key={service.title}
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <div className="arch-line mb-6" />
-                <h3 className="text-xl font-light tracking-wide text-arch-black mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-arch-medium font-light leading-relaxed mb-6">
-                  {service.description}
-                </p>
-                <Button variant="arch-minimal">
-                  READ
-                </Button>
-              </div>
-            ))}
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-20 animate-fade-in" style={{ animationDelay: '900ms' }}>
-            <Button variant="arch" size="arch-lg">
-              GET CONSULTATION
-            </Button>
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <div 
+                  key={service.title}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <Icon className="w-12 h-12 text-arch-accent mb-6" />
+                  <h3 className="text-xl font-light tracking-wide text-arch-black mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-arch-medium font-light leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+                  <Button 
+                    variant="arch"
+                    onClick={() => handleEnquiry(service.title)}
+                  >
+                    ENQUIRE NOW
+                  </Button>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <Footer />
+      
+      <EnquiryDialog
+        open={enquiryOpen}
+        onOpenChange={setEnquiryOpen}
+        serviceName={selectedService}
+      />
     </div>
   );
 };

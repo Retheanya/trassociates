@@ -4,6 +4,7 @@ import { ContentPanel } from '@/components/ContentPanel';
 import { HeroSlider } from '@/components/HeroSlider';
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { ServicesSection } from '@/components/ServicesSection';
+import { VideoSection } from '@/components/VideoSection';
 import { AmbitiousClients } from '@/components/AmbitiousClients';
 import { AwardsSection } from '@/components/AwardsSection';
 import { Footer } from '@/components/Footer';
@@ -34,6 +35,9 @@ const Index = () => {
 
       {/* Services Section */}
       <ServicesSection />
+
+      {/* Video Section */}
+      <VideoSection />
 
       {/* Awards Section */}
       <AwardsSection />
