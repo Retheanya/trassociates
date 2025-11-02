@@ -135,10 +135,10 @@ const Clients = () => {
                   START PROJECT
                 </a>
                 <a
-                  href="/projects"
+                  href="/services"
                   className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-arch-black text-arch-black bg-transparent font-light tracking-wider uppercase text-xs px-8 py-4 hover:bg-arch-black hover:text-white arch-transition h-12"
                 >
-                  VIEW PORTFOLIO
+                  VIEW SERVICES
                 </a>
               </div>
             </div>

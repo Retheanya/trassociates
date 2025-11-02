@@ -1,12 +1,71 @@
+import { useState } from 'react';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Phone, Mail, MessageSquare, MapPin } from 'lucide-react';
+import { Phone, Mail, MessageSquare, MapPin, Loader2 } from 'lucide-react';
 import archInterior1 from '@/assets/arch-interior-1.jpg';
+import axios from 'axios';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Replace with your actual API endpoint
+      const API_URL = import.meta.env.VITE_CONTACT_API_URL || 'https://api.example.com/contact';
+      
+      const response = await axios.post(API_URL, formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.status === 200 || response.status === 201) {
+        toast({
+          title: "Message Sent Successfully",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      }
+    } catch (error: any) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: error.response?.data?.message || "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -50,29 +109,58 @@ const Contact = () => {
               <h3 className="text-2xl font-light tracking-wide text-arch-black mb-8">
                 Let's start new project.
               </h3>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Input 
+                    name="name"
                     placeholder="Your Name"
                     className="arch-input"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                   />
                   <Input 
+                    name="email"
                     placeholder="Your Email"
                     type="email"
                     className="arch-input"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <Input 
+                  name="subject"
                   placeholder="Subject"
                   className="arch-input"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
                 />
                 <Textarea 
+                  name="message"
                   placeholder="Your Message"
                   rows={6}
                   className="arch-input"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                 />
-                <Button variant="arch" size="arch" className="w-full">
-                  SEND MESSAGE
+                <Button 
+                  variant="arch" 
+                  size="arch" 
+                  className="w-full"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                      SENDING...
+                    </>
+                  ) : (
+                    'SEND MESSAGE'
+                  )}
                 </Button>
               </form>
             </div>
@@ -82,15 +170,30 @@ const Contact = () => {
               <div className="space-y-8">
                 <div>
                   <div className="flex items-center space-x-4 mb-4">
+                    <MapPin className="h-5 w-5 text-arch-accent" />
+                    <h4 className="text-lg font-light tracking-wide text-arch-black">ADDRESS</h4>
+                  </div>
+                  <div className="ml-9">
+                    <address className="text-arch-medium font-light not-italic leading-relaxed">
+                      No 404, West Side to Kalyan Jewellers,<br />
+                      6th Street Extension,<br />
+                      Gandhipuram, Coimbatore,<br />
+                      Tamil Nadu - 641012
+                    </address>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex items-center space-x-4 mb-4">
                     <Phone className="h-5 w-5 text-arch-accent" />
                     <h4 className="text-lg font-light tracking-wide text-arch-black">PHONE</h4>
                   </div>
                   <div className="space-y-2 ml-9">
-                    <a href="tel:+45479253798" className="block text-arch-medium hover:text-arch-black arch-transition">
-                      +45 (0)4 79 25 37 98
+                    <a href="tel:+919042514845" className="block text-arch-medium hover:text-arch-black arch-transition">
+                      +91 - 9042514845
                     </a>
-                    <a href="tel:+44479253730" className="block text-arch-medium hover:text-arch-black arch-transition">
-                      +44 (0)4 79 25 37 30
+                    <a href="tel:+919486112301" className="block text-arch-medium hover:text-arch-black arch-transition">
+                      +91 - 9486112301
                     </a>
                   </div>
                 </div>
@@ -101,23 +204,9 @@ const Contact = () => {
                     <h4 className="text-lg font-light tracking-wide text-arch-black">EMAIL</h4>
                   </div>
                   <div className="space-y-2 ml-9">
-                    <a href="mailto:prague@info.com" className="block text-arch-medium hover:text-arch-black arch-transition">
-                      prague@info.com
+                    <a href="mailto:tn.trassociates@gmail.com" className="block text-arch-medium hover:text-arch-black arch-transition">
+                      tn.trassociates@gmail.com
                     </a>
-                    <a href="mailto:prague_arh@gmail.com" className="block text-arch-medium hover:text-arch-black arch-transition">
-                      prague_arh@gmail.com
-                    </a>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex items-center space-x-4 mb-4">
-                    <MessageSquare className="h-5 w-5 text-arch-accent" />
-                    <h4 className="text-lg font-light tracking-wide text-arch-black">SKYPE</h4>
-                  </div>
-                  <div className="space-y-2 ml-9">
-                    <span className="block text-arch-medium">prague_support_1</span>
-                    <span className="block text-arch-medium">prague_support_2</span>
                   </div>
                 </div>
               </div>
@@ -127,7 +216,7 @@ const Contact = () => {
       </section>
 
       {/* Locations Section */}
-      <section className="py-20 bg-content-light">
+      {/* <section className="py-20 bg-content-light">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in-up">
             <p className="text-sm font-light tracking-widest uppercase text-arch-medium mb-4">
@@ -186,7 +275,7 @@ const Contact = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

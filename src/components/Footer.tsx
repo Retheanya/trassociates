@@ -31,9 +31,8 @@ export const Footer = () => {
             <h4 className="text-lg font-light tracking-wide mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {[
-                { label: 'Projects', href: '/projects' },
-                { label: 'About', href: '/about' },
                 { label: 'Services', href: '/services' },
+                { label: 'About', href: '/about' },
                 { label: 'Clients', href: '/clients' },
                 { label: 'Contact', href: '/contact' }
               ].map((link) => (
@@ -56,27 +55,28 @@ export const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-arch-accent flex-shrink-0 mt-0.5" />
                 <address className="text-arch-light font-light not-italic">
-                  Lítačka 35/29,<br />
-                  06589 Nové Město,<br />
-                  Czech Republic
+                  No 404, West Side to Kalyan Jewellers,<br />
+                  6th Street Extension,<br />
+                  Gandhipuram, Coimbatore,<br />
+                  Tamil Nadu - 641012
                 </address>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-arch-accent" />
                 <a 
-                  href="tel:+45479253798"
+                  href="tel:+919042514845"
                   className="text-arch-light hover:text-white arch-transition"
                 >
-                  +45 (0)4 79 25 37 98
+                  +91 - 9042514845
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-arch-accent" />
                 <a 
-                  href="mailto:prague@info.com"
+                  href="mailto:tn.trassociates@gmail.com"
                   className="text-arch-light hover:text-white arch-transition"
                 >
-                  prague@info.com
+                  tn.trassociates@gmail.com
                 </a>
               </div>
             </div>
@@ -84,18 +84,18 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-arch-light font-light text-sm">
-            © 2024 TR Associates. All rights reserved.
+            © 2025 TR Associates. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          {/* <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-arch-light hover:text-white arch-transition text-sm">
               Privacy Policy
             </a>
             <a href="#" className="text-arch-light hover:text-white arch-transition text-sm">
               Terms of Service
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

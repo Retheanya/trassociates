@@ -1,27 +1,28 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '@/assets/tr-logo.png';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
-    { label: 'Projects', href: '/projects' },
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
-    { label: 'Clients', href: '/clients' },
+    { label: 'Our Clients', href: '/clients' },
+    { label: 'Gallery', href: '/gallery' },
     { label: 'Contact', href: '/contact' },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-content-bg/95 backdrop-blur-sm border-b border-arch-light/50">
-      <div className="flex items-center justify-between px-8 py-6">
+      <div className="flex items-center justify-between px-8">
         {/* Logo */}
         <a href='/'>
           <div className="flex items-center space-x-4">
             <img 
-              src="/uploads/5544ea7d-e270-4c60-a5ed-eadbd2c1a17c.png" 
+              src={logo} 
               alt="TR Associates" 
-              className="h-8 w-8 object-contain"
+              className="h-24 w-24 object-contain"
             />
             <h1 className="text-xl font-extralight tracking-widest text-arch-black">
               TR Associates
@@ -35,7 +36,7 @@ export const Navigation = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-light tracking-wide text-arch-medium hover:text-arch-black arch-transition"
+              className="text-md font-light tracking-wide text-arch-medium hover:text-arch-black arch-transition"
             >
               {item.label}
             </a>
