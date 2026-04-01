@@ -4,8 +4,9 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Phone, Mail, MessageSquare, MapPin, Loader2 } from 'lucide-react';
+import { Phone, Mail, MessageSquare, MapPin, Loader2, Clock } from 'lucide-react';
 import archInterior1 from '@/assets/arch-interior-1.jpg';
+import trLogo from '@/assets/tr-logo.png';
 import axios from 'axios';
 import { useToast } from '@/hooks/use-toast';
 
@@ -167,47 +168,58 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-              <div className="space-y-8">
-                <div>
-                  <div className="flex items-center space-x-4 mb-4">
-                    <MapPin className="h-5 w-5 text-arch-accent" />
-                    <h4 className="text-lg font-light tracking-wide text-arch-black">ADDRESS</h4>
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-12 md:space-y-0">
+                <div className="space-y-8">
+                  <div>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <MapPin className="h-5 w-5 text-arch-accent" />
+                      <h4 className="text-lg font-light tracking-wide text-arch-black">ADDRESS</h4>
+                    </div>
+                    <div className="ml-9">
+                      <address className="text-arch-medium font-light not-italic leading-relaxed">
+                        No 404, West Side to Kalyan Jewellers,<br />
+                        6th Street Extension,<br />
+                        Gandhipuram, Coimbatore,<br />
+                        Tamil Nadu - 641012
+                      </address>
+                    </div>
                   </div>
-                  <div className="ml-9">
-                    <address className="text-arch-medium font-light not-italic leading-relaxed">
-                      No 404, West Side to Kalyan Jewellers,<br />
-                      6th Street Extension,<br />
-                      Gandhipuram, Coimbatore,<br />
-                      Tamil Nadu - 641012
-                    </address>
+
+                  <div>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <Phone className="h-5 w-5 text-arch-accent" />
+                      <h4 className="text-lg font-light tracking-wide text-arch-black">PHONE</h4>
+                    </div>
+                    <div className="space-y-2 ml-9">
+                      <a href="tel:+919042514845" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        +91 - 9042514845
+                      </a>
+                      <a href="tel:+919486112301" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        +91 - 9486112301
+                      </a>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <Mail className="h-5 w-5 text-arch-accent" />
+                      <h4 className="text-lg font-light tracking-wide text-arch-black">EMAIL</h4>
+                    </div>
+                    <div className="space-y-2 ml-9">
+                      <a href="mailto:tn.trassociates@gmail.com" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        tn.trassociates@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
 
-                <div>
-                  <div className="flex items-center space-x-4 mb-4">
-                    <Phone className="h-5 w-5 text-arch-accent" />
-                    <h4 className="text-lg font-light tracking-wide text-arch-black">PHONE</h4>
-                  </div>
-                  <div className="space-y-2 ml-9">
-                    <a href="tel:+919042514845" className="block text-arch-medium hover:text-arch-black arch-transition">
-                      +91 - 9042514845
-                    </a>
-                    <a href="tel:+919486112301" className="block text-arch-medium hover:text-arch-black arch-transition">
-                      +91 - 9486112301
-                    </a>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex items-center space-x-4 mb-4">
-                    <Mail className="h-5 w-5 text-arch-accent" />
-                    <h4 className="text-lg font-light tracking-wide text-arch-black">EMAIL</h4>
-                  </div>
-                  <div className="space-y-2 ml-9">
-                    <a href="mailto:tn.trassociates@gmail.com" className="block text-arch-medium hover:text-arch-black arch-transition">
-                      tn.trassociates@gmail.com
-                    </a>
-                  </div>
+                {/* Logo Section */}
+                <div className="flex-shrink-0 md:ml-8 lg:ml-12">
+                  <img 
+                    src={trLogo} 
+                    alt="TR Associates Logo" 
+                    className="w-48 h-auto object-contain opacity-80"
+                  />
                 </div>
               </div>
             </div>
@@ -215,67 +227,82 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Locations Section */}
-      {/* <section className="py-20 bg-content-light">
+      {/* Map and Branch Details Section */}
+      <section className="py-20 bg-content-bg">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <p className="text-sm font-light tracking-widest uppercase text-arch-medium mb-4">
-              LOCATIONS
-            </p>
-            <h2 className="text-4xl md:text-5xl font-light tracking-wide text-arch-black">
-              Meet Us in your City.
-            </h2>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left: Map */}
+            <div className="w-full h-[450px] rounded-sm overflow-hidden shadow-sm border border-gray-100 animate-fade-in-up">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3268840673395!2d76.9642646740907!3d11.0116817547614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8590022f4625b%3A0xc3f587397e59b3!2s6th%20St%20Extension%2C%20Gandhipuram%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1711970000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="TR Associates Location"
+              ></iframe>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'EVO GRAND HALL',
-                address: 'Lítačka 35/29,\n06589 Nové Město,\nCzech Republic',
-                image: archInterior1
-              },
-              {
-                title: 'INNERE STADT',
-                address: 'Josefstädter Street,\n11 1030 Vienna,\nAustria',
-                image: archInterior1
-              },
-              {
-                title: 'MONOPRIX',
-                address: '47 Rue de Babylone,\n75007 Paris,\nFrance',
-                image: archInterior1
-              }
-            ].map((location, index) => (
-              <div 
-                key={location.title}
-                className="group animate-fade-in-up"
-                style={{ animationDelay: `${index * 150 + 600}ms` }}
-              >
-                <div className="relative overflow-hidden mb-6">
-                  <img
-                    src={location.image}
-                    alt={location.title}
-                    className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-arch-black/20 group-hover:bg-arch-black/40 arch-transition" />
+            {/* Right: Detailed Info */}
+            <div className="space-y-10 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+              {/* Branch Address */}
+              <div>
+                <div className="flex items-center space-x-4 mb-4">
+                  <MapPin className="h-5 w-5 text-arch-accent" />
+                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Branch office Address</h4>
                 </div>
-                <div className="text-center">
-                  <h4 className="text-lg font-light tracking-wide text-arch-black mb-4">
-                    {location.title}
-                  </h4>
-                  <div className="flex items-start justify-center space-x-2">
-                    <MapPin className="h-4 w-4 text-arch-accent mt-1 flex-shrink-0" />
-                    <address className="text-sm font-light text-arch-medium not-italic leading-relaxed">
-                      {location.address.split('\n').map((line, i) => (
-                        <span key={i} className="block">{line}</span>
-                      ))}
-                    </address>
-                  </div>
+                <div className="ml-9">
+                  <address className="text-arch-medium font-light not-italic leading-relaxed">
+                    No 404, West Side to Kalyan Jewellers,<br />
+                    6th Street Extension, Gandhipuram,<br />
+                    Coimbatore, Tamil Nadu 641012
+                  </address>
                 </div>
               </div>
-            ))}
+
+              {/* General Enquiries */}
+              <div>
+                <div className="flex items-center space-x-4 mb-4">
+                  <Mail className="h-5 w-5 text-arch-accent" />
+                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">General Enquiries</h4>
+                </div>
+                <div className="ml-9">
+                  <a href="mailto:tn.trassociates@gmail.com" className="text-arch-medium font-light hover:text-arch-black arch-transition">
+                    tn.trassociates@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Call Us */}
+              <div>
+                <div className="flex items-center space-x-4 mb-4">
+                  <Phone className="h-5 w-5 text-arch-accent" />
+                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Call Us</h4>
+                </div>
+                <div className="ml-9 space-y-1 text-arch-medium font-light">
+                  <p>+91-9042514845</p>
+                  <p>+91-9486112301</p>
+                </div>
+              </div>
+
+              {/* Our Timing */}
+              <div>
+                <div className="flex items-center space-x-4 mb-4">
+                  <Clock className="h-5 w-5 text-arch-accent" />
+                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Our Timing</h4>
+                </div>
+                <div className="ml-9 space-y-1 text-arch-medium font-light">
+                  <p>Mon - Fri : 09:30 AM - 06:30 PM</p>
+                  <p>Sat : 09:30 AM - 01.00 PM</p>
+                  <p>Sun : Closed</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <Footer />
     </div>

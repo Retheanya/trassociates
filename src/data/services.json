@@ -9,12 +9,12 @@
       "location": "Chennai, Tamil Nadu",
       "type": "Residential & Commercial",
       "director": "T.R Associates Team",
-      "imageName": "arch-interior-1",
+      "imageName": "rcc5",
       "imageNames": [
-        "arch-interior-1",
-        "arch-exterior-1",
-        "arch-concept-1",
-        "arch-interior-2"
+        "rcc1",
+        "rcc2",
+        "rcc3",
+        "rcc4"
       ],
       "serviceDescription": "Comprehensive RCC design and detailing services for residential and commercial structures."
     },
@@ -27,156 +27,156 @@
       "location": "Coimbatore, Tamil Nadu",
       "type": "Industrial",
       "director": "T.R Associates Team",
-      "imageName": "arch-exterior-1",
+      "imageName": "steal1",
       "imageNames": [
-        "arch-exterior-1",
-        "arch-interior-1",
-        "arch-concept-1",
-        "arch-interior-2"
+        "steal1",
+        "steal2",
+        "steal3",
+        "steal4"
       ],
       "serviceDescription": "Professional steel detailing and structural engineering services for industrial projects."
     },
     {
       "id": 3,
       "title": "Import Export License Consultants",
-      "description": "Expert consultation for import-export licensing and regulatory compliance. We guide businesses through the complex process of obtaining necessary licenses, ensuring compliance with government regulations, and streamlining international trade operations.",
+      "description": "Capitalising upon abundant knowledge, we render reliable & prompt Import Export License Consultancy services for custom clearances",
       "category": "CONSULTING",
       "year": "2023",
       "location": "Chennai, Tamil Nadu",
       "type": "Consulting Services",
       "director": "T.R Associates Team",
-      "imageName": "arch-concept-1",
+      "imageName": "global5",
       "imageNames": [
-        "arch-concept-1",
-        "arch-interior-1",
-        "arch-exterior-1",
-        "arch-interior-2"
+        "global1",
+        "global2",
+        "global3",
+        "global4"
       ],
       "serviceDescription": "Expert consultation for import-export licensing and regulatory compliance."
     },
     {
       "id": 4,
       "title": "Land Surveyors",
-      "description": "Accurate land surveying services using advanced technology and methodologies. Our certified surveyors provide precise boundary surveys, topographical mapping, and construction site surveys. We utilize the latest GPS and GIS technologies for maximum accuracy.",
+      "description": "We surveyors shall provide you the proper measurements and area for the land considered, determining the topography, contour levels, boundaries, distances and angles etc. our expert professional team of surveyors will render your needs of surveying based upon your inputs, we do have total station instrument, GIS, GPS, DGPS, Drone, dumpy levels, building 3D scanner",
       "category": "SURVEYING",
       "year": "2024",
       "location": "Coimbatore, Tamil Nadu",
       "type": "Surveying Services",
       "director": "T.R Associates Team",
-      "imageName": "arch-interior-2",
+      "imageName": "survey5",
       "imageNames": [
-        "arch-interior-2",
-        "arch-interior-1",
-        "arch-exterior-1",
-        "arch-concept-1"
+        "survey1",
+        "survey2",
+        "survey3",
+        "survey4"
       ],
       "serviceDescription": "Accurate land surveying services using advanced technology and methodologies."
     },
     {
       "id": 5,
       "title": "Soil Testing",
-      "description": "Comprehensive soil analysis and testing for construction site preparation. Our laboratory conducts detailed soil testing including bearing capacity, permeability, and compaction tests. These tests are essential for safe and sound foundation design.",
+      "description": "We do provide the properties of soil and safe bearing capacity of soil for the purpose of construction and recommendations of foundation, load tests etc. & appropriate solutions shall be rendered to our valuable customers for the economical construction, Our expert team handles that efficiently.",
       "category": "LABORATORY SERVICES",
       "year": "2023",
       "location": "Chennai, Tamil Nadu",
       "type": "Testing Services",
       "director": "T.R Associates Team",
-      "imageName": "arch-interior-1",
+      "imageName": "soil5",
       "imageNames": [
-        "arch-interior-1",
-        "arch-exterior-1",
-        "arch-concept-1",
-        "arch-interior-2"
+        "soil1",
+        "soil2",
+        "soil3",
+        "soil4"
       ],
       "serviceDescription": "Comprehensive soil analysis and testing for construction site preparation."
     },
     {
       "id": 6,
       "title": "Building Plan",
-      "description": "Complete building planning and architectural design services. We provide comprehensive building plans including floor plans, elevations, sections, and structural layouts. Our plans ensure compliance with local building codes and regulations.",
+      "description": "Planning is the most important aspects in the construction development, we do plan for best possible suitable ways to explore the infrastructure developments, we professionals stick to the statutory compliance by the authority concern,",
       "category": "ARCHITECTURAL PLANNING",
       "year": "2024",
       "location": "Coimbatore, Tamil Nadu",
       "type": "Planning Services",
       "director": "T.R Associates Team",
-      "imageName": "arch-exterior-1",
+      "imageName": "planning1",
       "imageNames": [
-        "arch-exterior-1",
-        "arch-interior-1",
-        "arch-concept-1",
-        "arch-interior-2"
+        "planning2",
+        "planning3",
+        "planning4",
+        "planning5"
       ],
       "serviceDescription": "Complete building planning and architectural design services."
     },
     {
       "id": 7,
       "title": "Structural Stability Certificates",
-      "description": "Official structural stability certification and compliance documentation. We provide certified structural stability assessments for existing buildings, ensuring safety and regulatory compliance. Our certificates are recognized by government authorities.",
+      "description": "we consultants shall be the responsible personals for the safety of the buildings our professional competence shown in the form of inspections, rectifications, certifications for the buildings concern for it, our services to conformity the safety highlights of the buildings which are more prone to damage by earthquake and any other natural calamities. We perform various tests prescribed by the experts, government bodies/agencies before rendering these certificates.",
       "category": "CERTIFICATION",
       "year": "2024",
       "location": "Chennai, Tamil Nadu",
-      "type": "Certification",
+      "type": "Certification Services",
       "director": "T.R Associates Team",
-      "imageName": "arch-concept-1",
+      "imageName": "certificate1",
       "imageNames": [
-        "arch-concept-1",
-        "arch-interior-1",
-        "arch-exterior-1",
-        "arch-interior-2"
+        "certificate2",
+        "certificate3",
+        "certificate4",
+        "certificate5"
       ],
       "serviceDescription": "Official structural stability certification and compliance documentation."
     },
     {
       "id": 8,
       "title": "Industrial Structural Designing",
-      "description": "Specialized structural design services for industrial and manufacturing facilities. Our team designs robust structures for factories, warehouses, and industrial complexes, considering heavy loads, machinery requirements, and operational safety.",
+      "description": "Our most priority shall be given for the industry/ factories, so that the concern factory/industry shall operate/produce their outcomes which shall meet out the demands of each individuals/public considered for high employability, good innovations, ease of reach to publics for their expectations, good configurations of factories with future expanding techniques, green campus, safety audits, machinery fitness certifications shall be provided to the client/customers with complete bound enough solutions to meet out the complete requirements set by the government bodies. we guide to attain all Statutory clearance like PCB NOC & License, Fire and safety NOC & License, Building approval and extensions, environmental clearance etc. required for installations of factory and renewals of such license considered",
       "category": "INDUSTRIAL DESIGN",
       "year": "2023",
       "location": "Coimbatore, Tamil Nadu",
       "type": "Industrial Design",
       "director": "T.R Associates Team",
-      "imageName": "arch-interior-2",
+      "imageName": "industry1",
       "imageNames": [
-        "arch-interior-2",
-        "arch-interior-1",
-        "arch-exterior-1",
-        "arch-concept-1"
+        "industry2",
+        "industry3",
+        "industry4",
+        "industry5"
       ],
       "serviceDescription": "Specialized structural design services for industrial and manufacturing facilities."
     },
     {
       "id": 9,
       "title": "Structural Stability Assessment",
-      "description": "Thorough assessment of structural stability and soundness of existing buildings. We conduct comprehensive evaluations to identify potential structural issues, assess building condition, and recommend necessary repairs or reinforcements.",
+      "description": "Structure frame is the backbone of any buildings for its existence, stability and soundness are the main motive behind the design of structures, the rigidity and safety should be ensure all the times to increase its durability & serviceability. We have an experienced team to work on the stability, strength and rigidity for all structures, we shall using Non destructive instruments & destructive tests for such assessments of buildings for extensions of floors etc. also we shall provide the better alternatives IN addition to conventional methods of practice, cost effective techniques shall be provided, our focus for fast track construction techniques, our design for a purpose utmost beneficial to the end user, we shall provide the training to artisans for the best outcomes as of our delivery of design & drawings",
       "category": "ASSESSMENT",
       "year": "2024",
       "location": "Chennai, Tamil Nadu",
       "type": "Assessment Services",
       "director": "T.R Associates Team",
-      "imageName": "arch-interior-1",
+      "imageName": "structure1",
       "imageNames": [
-        "arch-interior-1",
-        "arch-exterior-1",
-        "arch-concept-1",
-        "arch-interior-2"
+        "structure2",
+        "structure3",
+        "structure4",
+        "structure5"
       ],
       "serviceDescription": "Thorough assessment of structural stability and soundness of existing buildings."
     },
     {
       "id": 10,
       "title": "Property Valuers",
-      "description": "Professional property valuation services for residential and commercial properties. Our certified valuers provide accurate property assessments for buying, selling, insurance, and legal purposes. We follow industry standards and government guidelines.",
+      "description": "We offer accurate property valuation services for our customers and financial institutions for the beneficial concerns. the valuation could carried out under the guidelines provided by Government bodies/ valuer organization's, all the parameters shall be considered for the final value of the property, we strictly adhere to the norms considered before reporting/revealing the value, consultations provided based on the functional requirements and value of the building/ land etc. narrow down approach for the building/ property value shall adopted, valuation for VISA requirements shall be done, valuation for capital gain of customers under wealth tax acts/ under value of asset /SARFAESI acts",
       "category": "VALUATION",
       "year": "2023",
       "location": "Coimbatore, Tamil Nadu",
       "type": "Valuation Services",
       "director": "T.R Associates Team",
-      "imageName": "arch-exterior-1",
+      "imageName": "property5",
       "imageNames": [
-        "arch-exterior-1",
-        "arch-interior-1",
-        "arch-concept-1",
-        "arch-interior-2"
+        "property2",
+        "property3",
+        "property4",
+        "property1"
       ],
       "serviceDescription": "Professional property valuation services for residential and commercial properties."
     }

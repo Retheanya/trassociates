@@ -123,15 +123,23 @@ const ServiceDetail = () => {
                 </p>
               </div>
 
-              {/* Project Gallery */}
+              {/* Project Gallery - Editorial Masonry Style */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
                 {projectData.images.map((image, index) => (
-                  <div key={index} className="group cursor-pointer">
-                    <div className="relative overflow-hidden bg-white">
+                  <div 
+                    key={index} 
+                    className={`group cursor-pointer overflow-hidden bg-white ${
+                      index === 0 ? 'md:col-span-2 md:h-[500px]' : 
+                      index === 1 ? 'md:h-[400px]' :
+                      index === 2 ? 'md:h-[400px]' :
+                      'md:col-span-2 md:h-[450px]'
+                    }`}
+                  >
+                    <div className="relative h-full w-full overflow-hidden">
                       <img
                         src={image}
                         alt={`${projectData.title} ${index + 1}`}
-                        className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-arch-black/0 group-hover:bg-arch-black/20 arch-transition" />
                     </div>

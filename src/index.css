@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Architectural Design System - Monochrome & Neutral Palette */
 
@@ -118,33 +118,40 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   /* Architectural typography */
   .arch-heading {
-    @apply text-arch-black font-light tracking-wide leading-tight;
+    color: hsl(var(--arch-black));
     font-weight: 300;
+    letter-spacing: 0.025em;
+    line-height: 1.25;
   }
 
   .arch-title {
-    @apply text-arch-black font-extralight tracking-wider leading-none;
+    color: hsl(var(--arch-black));
     font-weight: 200;
+    letter-spacing: 0.05em;
+    line-height: 1;
   }
 
   .arch-body {
-    @apply text-arch-medium font-light tracking-wide leading-relaxed;
+    color: hsl(var(--arch-medium));
     font-weight: 300;
+    letter-spacing: 0.025em;
+    line-height: 1.625;
   }
 
   /* Architectural spacing utilities */
   .arch-container {
-    @apply max-w-none;
+    max-width: none;
   }
 
   /* Smooth transitions for micro-interactions */
@@ -158,10 +165,14 @@
 
   /* Subtle accent lines */
   .arch-line {
-    @apply w-12 h-px bg-arch-accent;
+    width: 3rem;
+    height: 1px;
+    background-color: hsl(var(--arch-accent));
   }
 
   .arch-line-vertical {
-    @apply w-px h-12 bg-arch-accent;
+    width: 1px;
+    height: 3rem;
+    background-color: hsl(var(--arch-accent));
   }
 }
