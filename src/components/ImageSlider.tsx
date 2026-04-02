@@ -1,34 +1,34 @@
 import { useState, useEffect } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
-import archInterior1 from '@/assets/arch-interior-1.jpg';
-import archExterior1 from '@/assets/arch-exterior-1.jpg';
-import archConcept1 from '@/assets/arch-concept-1.jpg';
-import archInterior2 from '@/assets/arch-interior-2.jpg';
+import feature1 from '@/assets/feature1.jpg';
+import feature2 from '@/assets/feature2.jpg';
+import feature3 from '@/assets/feature3.jpg';
+import feature4 from '@/assets/feature4.jpg';
 
 const slides = [
   {
     id: 1,
-    image: archInterior1,
-    title: 'Minimalist Interior',
-    type: 'Interior Design'
+    image: feature1,
+    title: 'Monolithic Edge',
+    type: 'ARCHITECTURE'
   },
   {
     id: 2,
-    image: archExterior1,
-    title: 'Contemporary Facade',
-    type: 'Exterior Design'
+    image: feature2,
+    title: 'Shadow Axis',
+    type: 'EXTERIOR DESIGN'
   },
   {
     id: 3,
-    image: archConcept1,
-    title: 'Conceptual Form',
-    type: 'Concept Design'
+    image: feature3,
+    title: 'Material Warmth',
+    type: 'CONCEPT DESIGN'
   },
   {
     id: 4,
-    image: archInterior2,
-    title: 'Residential Space',
-    type: 'Interior Design'
+    image: feature4,
+    title: 'Fluid Space',
+    type: 'INTERIOR DESIGN'
   }
 ];
 

@@ -1,37 +1,38 @@
 import { useState } from 'react';
 import { Quote, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import bgImage from '@/assets/bgimage.jpg';
 
 const testimonials = [
   {
     id: 1,
-    name: 'Rajesh Kumar',
-    position: 'Project Manager',
-    company: 'Greenfield Developers',
+    name: 'Suhas Sharma',
+    position: 'Client',
+    company: 'Residential Project',
     location: 'Chennai',
     rating: 5,
-    quote: 'TR Associates provided exceptional structural design services for our residential complex. Their attention to detail and professional approach exceeded our expectations. The project was completed on time and within budget.',
-    project: 'Residential Complex Project'
+    quote: 'They work and try to solve all our doubts. Best customer service.',
+    project: 'Home Consultation'
   },
   {
     id: 2,
-    name: 'Priya Sharma',
-    position: 'Director',
-    company: 'Metro Construction Co.',
-    location: 'Coimbatore',
+    name: 'Anuj Mohite',
+    position: 'Property Owner',
+    company: 'New Property Purchase',
+    location: 'Chennai',
     rating: 5,
-    quote: 'Working with TR Associates has been a game-changer for our commercial projects. Their expertise in RCC design and steel detailing helped us achieve superior structural integrity while optimizing costs.',
-    project: 'Commercial Complex Design'
+    quote: 'I have consulted with them for buying a new property. They gave the best consultation.',
+    project: 'Property Consultation'
   },
   {
     id: 3,
-    name: 'Arvind Menon',
-    position: 'CEO',
-    company: 'Heritage Builders',
-    location: 'Chennai',
+    name: 'P.Sankar',
+    position: 'Promoter & Builder',
+    company: 'Construction Services',
+    location: 'Coimbatore',
     rating: 5,
-    quote: 'The team at TR Associates is highly professional and knowledgeable. Their soil testing and structural stability assessments gave us confidence in our project foundation. Highly recommended!',
-    project: 'Industrial Facility'
+    quote: 'The engineer gives us good building design and economic detail drawings, where we saved up to 4% of total cost comparative with our previous projects.',
+    project: 'Building Design & Planning'
   },
   {
     id: 4,
@@ -85,8 +86,17 @@ export const TestimonialsSection = () => {
   const prevTestimonialItem = testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length];
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-white via-content-light to-white overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section className="relative py-24 overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={bgImage}
+          alt="Background"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <p className="text-sm font-light tracking-widest uppercase text-arch-medium mb-4">

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MessageSquare, MapPin, Loader2, Clock } from 'lucide-react';
-import archInterior1 from '@/assets/arch-interior-1.jpg';
+import contactImg from '@/assets/contact.jpg';
 import trLogo from '@/assets/tr-logo.png';
 import axios from 'axios';
 import { useToast } from '@/hooks/use-toast';
@@ -74,7 +74,7 @@ const Contact = () => {
       {/* Hero Banner */}
       <section className="relative h-96 overflow-hidden">
         <img
-          src={archInterior1}
+          src={contactImg}
           alt="Contact Us Banner"
           className="w-full h-full object-cover"
         />
@@ -230,9 +230,9 @@ const Contact = () => {
       {/* Map and Branch Details Section */}
       <section className="py-20 bg-content-bg">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
             {/* Left: Map */}
-            <div className="w-full h-[450px] rounded-sm overflow-hidden shadow-sm border border-gray-100 animate-fade-in-up">
+            <div className="w-full h-[450px] rounded-sm overflow-hidden shadow-sm border border-gray-100 animate-fade-in-left">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3268840673395!2d76.9642646740907!3d11.0116817547614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8590022f4625b%3A0xc3f587397e59b3!2s6th%20St%20Extension%2C%20Gandhipuram%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1711970000000!5m2!1sen!2sin" 
                 width="100%" 
@@ -246,12 +246,12 @@ const Contact = () => {
             </div>
 
             {/* Right: Detailed Info */}
-            <div className="space-y-10 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            <div className="space-y-10 animate-slide-in-right" style={{ animationDelay: '200ms' }}>
               {/* Branch Address */}
               <div>
                 <div className="flex items-center space-x-4 mb-4">
                   <MapPin className="h-5 w-5 text-arch-accent" />
-                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Branch office Address</h4>
+                  <h4 className="text-lg font-light tracking-wide text-arch-black">Branch office address</h4>
                 </div>
                 <div className="ml-9">
                   <address className="text-arch-medium font-light not-italic leading-relaxed">
@@ -266,7 +266,7 @@ const Contact = () => {
               <div>
                 <div className="flex items-center space-x-4 mb-4">
                   <Mail className="h-5 w-5 text-arch-accent" />
-                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">General Enquiries</h4>
+                  <h4 className="text-lg font-light tracking-wide text-arch-black">General enquiries</h4>
                 </div>
                 <div className="ml-9">
                   <a href="mailto:tn.trassociates@gmail.com" className="text-arch-medium font-light hover:text-arch-black arch-transition">
@@ -279,7 +279,7 @@ const Contact = () => {
               <div>
                 <div className="flex items-center space-x-4 mb-4">
                   <Phone className="h-5 w-5 text-arch-accent" />
-                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Call Us</h4>
+                  <h4 className="text-lg font-light tracking-wide text-arch-black">Call us</h4>
                 </div>
                 <div className="ml-9 space-y-1 text-arch-medium font-light">
                   <p>+91-9042514845</p>
@@ -291,7 +291,7 @@ const Contact = () => {
               <div>
                 <div className="flex items-center space-x-4 mb-4">
                   <Clock className="h-5 w-5 text-arch-accent" />
-                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Our Timing</h4>
+                  <h4 className="text-lg font-light tracking-wide text-arch-black">Our timing</h4>
                 </div>
                 <div className="ml-9 space-y-1 text-arch-medium font-light">
                   <p>Mon - Fri : 09:30 AM - 06:30 PM</p>

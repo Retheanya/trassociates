@@ -1,6 +1,7 @@
-import { Award, Target, Users, Heart, TrendingUp, Clock } from 'lucide-react';
-import archExterior1 from '@/assets/arch-exterior-1.jpg';
+import { Award, Target, Users, Heart, TrendingUp, Clock, IndianRupee, ThumbsUp } from 'lucide-react';
+import aboutImg from '@/assets/about.jpg';
 import archInterior1 from '@/assets/arch-interior-1.jpg';
+import whyUsBg from '@/assets/whyus.jpg';
 
 const values = [
   {
@@ -42,7 +43,7 @@ export const AboutSection = () => {
           <div className="relative group">
             <div className="relative aspect-[4/5] overflow-hidden">
               <img
-                src={archExterior1}
+                src={aboutImg}
                 alt="About Us"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -154,6 +155,73 @@ export const AboutSection = () => {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Why Us Section - Redesigned Split Layout */}
+      <div className="container mx-auto px-6 py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Side - Image */}
+          <div className="relative group animate-slide-in-left">
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <img
+                src={whyUsBg}
+                alt="Why Us"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-arch-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+            </div>
+            
+            {/* Minimal Decorative Badge */}
+            <div className="absolute -top-4 -left-4 bg-arch-accent px-6 py-4 shadow-xl animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+              <div className="text-white text-lg font-light">Trusted</div>
+            </div>
+          </div>
+
+          {/* Right Side - Content Cards Stacked */}
+          <div className="flex flex-col space-y-8">
+            <div className="relative animate-slide-in-right">
+              <p className="text-sm font-light text-arch-medium mb-4">
+                Choose excellence
+              </p>
+              <div className="arch-line mb-6" />
+              <h3 className="text-4xl md:text-5xl font-light tracking-wide text-arch-black mb-6">
+                Why Us
+              </h3>
+            </div>
+
+            <div className="space-y-6">
+              {/* Card 1 */}
+              <div className="group bg-white p-8 border-l-4 border-transparent hover:border-arch-accent shadow-sm hover:shadow-xl arch-transition flex items-center gap-8 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+                <div className="flex-shrink-0 bg-arch-accent/10 p-4 rounded-full group-hover:bg-arch-accent group-hover:text-white transition-all duration-300">
+                  <Users className="w-6 h-6 text-arch-accent group-hover:text-white" />
+                </div>
+                <p className="text-base font-light leading-relaxed text-arch-medium">
+                  Experienced professionals and industry experts
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="group bg-white p-8 border-l-4 border-transparent hover:border-arch-accent shadow-sm hover:shadow-xl arch-transition flex items-center gap-8 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+                <div className="flex-shrink-0 bg-arch-accent/10 p-4 rounded-full group-hover:bg-arch-accent group-hover:text-white transition-all duration-300">
+                  <IndianRupee className="w-6 h-6 text-arch-accent group-hover:text-white" />
+                </div>
+                <p className="text-base font-light leading-relaxed text-arch-medium">
+                  Services at competitive charges & no hidden charges.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="group bg-white p-8 border-l-4 border-transparent hover:border-arch-accent shadow-sm hover:shadow-xl arch-transition flex items-center gap-8 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
+                <div className="flex-shrink-0 bg-arch-accent/10 p-4 rounded-full group-hover:bg-arch-accent group-hover:text-white transition-all duration-300">
+                  <ThumbsUp className="w-6 h-6 text-arch-accent group-hover:text-white" />
+                </div>
+                <p className="text-base font-light leading-relaxed text-arch-medium">
+                  Trusted valuation based on reliable developed data system.
+                </p>
+              </div>
             </div>
           </div>
         </div>

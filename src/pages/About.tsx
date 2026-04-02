@@ -1,7 +1,7 @@
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { AboutSection } from '@/components/AboutSection';
-import archExterior1 from '@/assets/arch-exterior-1.jpg';
+import aboutHeroImg from '@/assets/abouthero.jpg';
 
 const About = () => {
   return (
@@ -11,7 +11,7 @@ const About = () => {
       {/* Hero Banner */}
       <section className="relative h-96 overflow-hidden">
         <img
-          src={archExterior1}
+          src={aboutHeroImg}
           alt="About Us Banner"
           className="w-full h-full object-cover"
         />

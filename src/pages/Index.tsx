@@ -8,6 +8,9 @@ import { AboutSection } from '@/components/AboutSection';
 import { AmbitiousClients } from '@/components/AmbitiousClients';
 import { AwardsSection } from '@/components/AwardsSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { FoundationSection } from '@/components/FoundationSection';
+import { ClientStories } from '@/components/ClientStories';
+import { SurveyorTeam } from '@/components/SurveyorTeam';
 import { Footer } from '@/components/Footer';
 
 const Index = () => {
@@ -44,6 +47,15 @@ const Index = () => {
 
       {/* Testimonials Section */}
       <TestimonialsSection />
+
+      {/* Foundation Section */}
+      <FoundationSection />
+
+      {/* Client Success Stories */}
+      <ClientStories />
+
+      {/* Surveyor Team Section */}
+      <SurveyorTeam />
 
       {/* Ambitious Clients Section */}
       <AmbitiousClients />

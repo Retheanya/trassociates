@@ -11,6 +11,7 @@ import heroSlide1 from '@/assets/hero-slide-1.jpg';
 import heroSlide2 from '@/assets/hero-slide-2.jpg';
 import heroSlide3 from '@/assets/hero-slide-3.jpg';
 import heroSlide4 from '@/assets/hero-slide-4.jpg';
+import galleryImg from '@/assets/gallery.jpg';
 
 const Gallery = () => {
   const [enquiryOpen, setEnquiryOpen] = useState(false);
@@ -34,12 +35,18 @@ const Gallery = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[400px] bg-arch-black flex items-center justify-center">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-6xl font-light tracking-wide text-white mb-4">
+      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <img
+          src={galleryImg}
+          alt="Gallery Banner"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-arch-black/60" />
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h1 className="text-6xl font-light tracking-wide text-white mb-4 animate-fade-in">
             Gallery
           </h1>
-          <p className="text-xl text-white/80 font-light tracking-wide">
+          <p className="text-xl text-white/80 font-light tracking-wide animate-fade-in" style={{ animationDelay: '200ms' }}>
             Explore our portfolio of architectural excellence
           </p>
         </div>
