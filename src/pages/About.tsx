@@ -22,7 +22,7 @@ const About = () => {
               ABOUT US
             </p>
             <h1 className="text-5xl md:text-6xl font-light tracking-wide">
-              Leading Consultants & Planning Today
+              Engineering Consultant with Specialized at Civil engineering.
             </h1>
           </div>
         </div>

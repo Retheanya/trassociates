@@ -8,10 +8,10 @@ export const Navigation = () => {
   const navigate = useNavigate();
   const navItems = [
     { label: 'About', href: '/about' },
-    { label: 'Capabilities', href: '/capabilities' },
+    // { label: 'Capabilities', href: '/capabilities' },
     { label: 'Services', href: '/services' },
     { label: 'Our Clients', href: '/clients' },
-    { label: 'Gallery', href: '/gallery' },
+    // { label: 'Gallery', href: '/gallery' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -26,7 +26,7 @@ export const Navigation = () => {
               alt="TR Associates" 
               className="h-24 w-24 object-contain"
             />
-            <h1 className="text-xl font-extralight tracking-widest text-arch-black">
+            <h1 className="text-xl font-bold text-arch-black font-sans">
               TR Associates
             </h1>
           </div>

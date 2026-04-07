@@ -15,6 +15,7 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
+    phone: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,6 +53,7 @@ const Contact = () => {
           name: '',
           email: '',
           subject: '',
+          phone: '',
           message: ''
         });
       }
@@ -131,6 +133,15 @@ const Contact = () => {
                   />
                 </div>
                 <Input 
+                  name="phone"
+                  placeholder="Your Phone Number"
+                  type="tel"
+                  className="arch-input"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+                <Input 
                   name="subject"
                   placeholder="Subject"
                   className="arch-input"
@@ -206,8 +217,11 @@ const Contact = () => {
                       <h4 className="text-lg font-light tracking-wide text-arch-black">EMAIL</h4>
                     </div>
                     <div className="space-y-2 ml-9">
-                      <a href="mailto:tn.trassociates@gmail.com" className="block text-arch-medium hover:text-arch-black arch-transition">
-                        tn.trassociates@gmail.com
+                      <a href="mailto:thilak@tr-associates.in" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        thilak@tr-associates.in
+                      </a>
+                      <a href="mailto:design@tr-associates.in" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        design@tr-associates.in
                       </a>
                     </div>
                   </div>
@@ -268,9 +282,12 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-arch-accent" />
                   <h4 className="text-lg font-light tracking-wide text-arch-black">General enquiries</h4>
                 </div>
-                <div className="ml-9">
-                  <a href="mailto:tn.trassociates@gmail.com" className="text-arch-medium font-light hover:text-arch-black arch-transition">
-                    tn.trassociates@gmail.com
+                <div className="ml-9 space-y-1">
+                  <a href="mailto:thilak@tr-associates.in" className="block text-arch-medium font-light hover:text-arch-black arch-transition">
+                    thilak@tr-associates.in
+                  </a>
+                  <a href="mailto:design@tr-associates.in" className="block text-arch-medium font-light hover:text-arch-black arch-transition">
+                    design@tr-associates.in
                   </a>
                 </div>
               </div>

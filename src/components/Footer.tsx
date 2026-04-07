@@ -70,14 +70,24 @@ export const Footer = () => {
                   +91 - 9042514845
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-arch-accent" />
-                <a 
-                  href="mailto:tn.trassociates@gmail.com"
-                  className="text-arch-light hover:text-white arch-transition"
-                >
-                  tn.trassociates@gmail.com
-                </a>
+              <div className="flex flex-col space-y-2">
+                <div className="flex items-center space-x-3">
+                  <Mail className="h-5 w-5 text-arch-accent" />
+                  <a 
+                    href="mailto:thilak@tr-associates.in"
+                    className="text-arch-light hover:text-white arch-transition"
+                  >
+                    thilak@tr-associates.in
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 ml-8">
+                  <a 
+                    href="mailto:design@tr-associates.in"
+                    className="text-arch-light hover:text-white arch-transition"
+                  >
+                    design@tr-associates.in
+                  </a>
+                </div>
               </div>
             </div>
           </div>

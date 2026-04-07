@@ -10,28 +10,28 @@ const slides = [
   {
     id: 1,
     image: heroSlide1,
-    location: 'CASABLANCA, MOROCCO',
+    location: 'CASABLANCA',
     title: 'Incredible Small Green Homes That Live Large',
     subtitle: 'Sustainable Architecture'
   },
   {
     id: 2,
     image: heroSlide2,
-    location: 'MIAMI, FLORIDA',
+    location: 'MIAMI',
     title: 'Contemporary Ocean Views',
     subtitle: 'Residential Design'
   },
   {
     id: 3,
     image: heroSlide3,
-    location: 'TOKYO, JAPAN',
+    location: 'TOKYO',
     title: 'Future Museum Complex',
     subtitle: 'Cultural Architecture'
   },
   {
     id: 4,
     image: heroSlide4,
-    location: 'NEW YORK, USA',
+    location: 'NEW YORK',
     title: 'Urban Skyscraper Design',
     subtitle: 'Commercial Architecture'
   }
@@ -62,7 +62,7 @@ export const HeroSlider = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsTransitioning(false);
-    }, 800);
+    }, 600);
     return () => clearTimeout(timer);
   }, [currentSlide]);
 
@@ -83,8 +83,8 @@ export const HeroSlider = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            className={`absolute inset-0 transition-all duration-1200 ease-out ${
+              index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
             }`}
           >
             <img
@@ -100,20 +100,20 @@ export const HeroSlider = () => {
       {/* Content Overlay */}
       <div className="relative z-10 flex h-full items-center justify-center">
         <div className="text-center text-white max-w-4xl px-4">
-          <div className="overflow-hidden">
+          {/* <div className="overflow-hidden">
             <p 
-              className={`text-sm font-light tracking-widest uppercase mb-4 transition-transform duration-800 delay-300 ${
-                isTransitioning ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+              className={`text-sm font-light tracking-widest uppercase mb-4 transition-all duration-1500 delay-100 ${
+                isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
               }`}
             >
               {slides[currentSlide].location}
             </p>
-          </div>
+          </div> */}
           
           <div className="overflow-hidden">
             <h1 
-              className={`text-6xl md:text-7xl font-light tracking-wide leading-tight mb-6 transition-transform duration-800 delay-500 ${
-                isTransitioning ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+              className={`text-6xl md:text-7xl font-light tracking-wide leading-tight mb-6 transition-all duration-1500 delay-200 ${
+                isTransitioning ? 'translate-y-12 opacity-0' : 'translate-y-0 opacity-100'
               }`}
             >
               {slides[currentSlide].title}
@@ -122,15 +122,15 @@ export const HeroSlider = () => {
 
           <div className="overflow-hidden">
             <p 
-              className={`text-lg font-light tracking-wide mb-8 transition-transform duration-800 delay-700 ${
-                isTransitioning ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+              className={`text-lg font-light tracking-wide mb-8 transition-all duration-1500 delay-400 ${
+                isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
               }`}
             >
               {slides[currentSlide].subtitle}
             </p>
           </div>
 
-          <div className={`transition-all duration-800 delay-900 ${
+          <div className={`transition-all duration-1500 delay-700 ${
             isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
           }`}>
             <Button variant="arch-outline" size="arch">
