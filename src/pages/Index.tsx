@@ -52,13 +52,13 @@ const Index = () => {
       <FoundationSection />
 
       {/* Client Success Stories */}
-      <ClientStories />
+      {/* <ClientStories /> */}
 
       {/* Surveyor Team Section */}
       <SurveyorTeam />
 
       {/* Ambitious Clients Section */}
-      <AmbitiousClients />
+      {/* <AmbitiousClients /> */}
 
       <Footer />
     </div>
