@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Heart } from 'lucide-react';
 import trLogo from '@/assets/tr-logo.png';
 
 export const Footer = () => {
@@ -84,18 +84,23 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center">
+        <div className="border-t border-white/20 mt-12 pt-8 flex flex-col justify-center items-center space-y-4">
           <p className="text-arch-light font-light text-sm">
             © 2025 TR Associates. All rights reserved.
           </p>
-          {/* <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-arch-light hover:text-white arch-transition text-sm">
-              Privacy Policy
+          <div className="flex items-center space-x-1.5 text-arch-light font-light text-sm">
+            <span>Made with</span>
+            <Heart className="h-3.5 w-3.5 text-white fill-white animate-pulse" />
+            <span>by</span>
+            <a 
+              href="https://technovuz.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-arch-accent transition-colors duration-300 font-normal"
+            >
+              Technovuz
             </a>
-            <a href="#" className="text-arch-light hover:text-white arch-transition text-sm">
-              Terms of Service
-            </a>
-          </div> */}
+          </div>
         </div>
       </div>
     </footer>

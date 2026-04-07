@@ -5,8 +5,10 @@ import logo from '@/assets/tr-logo.png';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const navItems = [
     { label: 'About', href: '/about' },
+    { label: 'Capabilities', href: '/capabilities' },
     { label: 'Services', href: '/services' },
     { label: 'Our Clients', href: '/clients' },
     { label: 'Gallery', href: '/gallery' },
@@ -61,7 +63,12 @@ export const Navigation = () => {
                 key={item.label}
                 href={item.href}
                 className="block text-sm font-light tracking-wide text-arch-medium hover:text-arch-black arch-transition"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  if (item.href.startsWith('/capabilities/')) {
+                    navigate(item.href);
+                  }
+                }}
               >
                 {item.label}
               </a>
