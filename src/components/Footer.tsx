@@ -33,9 +33,11 @@ export const Footer = () => {
               {[
                 { label: 'Services', href: '/services' },
                 { label: 'About', href: '/about' },
+                { label: 'Gallery', href: '/gallery' },
                 { label: 'Clients', href: '/clients' },
                 { label: 'Contact', href: '/contact' }
               ].map((link) => (
+
                 <li key={link.label}>
                   <a 
                     href={link.href}
@@ -54,33 +56,21 @@ export const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-arch-accent flex-shrink-0 mt-0.5" />
-                <address className="text-arch-light font-light not-italic">
-                  No 404, West Side to Kalyan Jewellers,<br />
-                  6th Street Extension,<br />
-                  Gandhipuram, Coimbatore,<br />
-                  Tamil Nadu - 641012
+                <address className="text-arch-light font-light not-italic uppercase">
+                  #404 6th STREET EXTENSION,<br />
+                  GANDHIPURAM, COIMBATORE – 641012
                 </address>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-arch-accent" />
-                <a 
-                  href="tel:+919042514845"
-                  className="text-arch-light hover:text-white arch-transition"
-                >
-                  +91 - 9042514845
-                </a>
+                <div className="flex flex-col space-y-1">
+                  <a href="tel:04224950533" className="text-arch-light hover:text-white arch-transition">04224950533</a>
+                  <a href="tel:9042514845" className="text-arch-light hover:text-white arch-transition">9042514845</a>
+                </div>
               </div>
               <div className="flex flex-col space-y-2">
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-arch-accent" />
-                  <a 
-                    href="mailto:thilak@tr-associates.in"
-                    className="text-arch-light hover:text-white arch-transition"
-                  >
-                    thilak@tr-associates.in
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 ml-8">
                   <a 
                     href="mailto:design@tr-associates.in"
                     className="text-arch-light hover:text-white arch-transition"

@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MessageSquare, MapPin, Loader2, Clock } from 'lucide-react';
 import contactImg from '@/assets/contact.jpg';
 import trLogo from '@/assets/tr-logo.png';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -57,11 +57,12 @@ const Contact = () => {
           message: ''
         });
       }
-    } catch (error: any) {
-      console.error('Error submitting form:', error);
+    } catch (error) {
+      const axiosError = error as AxiosError<{ message?: string }>;
+      console.error('Error submitting form:', axiosError);
       toast({
         title: "Error",
-        description: error.response?.data?.message || "Failed to send message. Please try again later.",
+        description: axiosError.response?.data?.message || "Failed to send message. Please try again later.",
         variant: "destructive",
       });
     } finally {
@@ -184,14 +185,12 @@ const Contact = () => {
                   <div>
                     <div className="flex items-center space-x-4 mb-4">
                       <MapPin className="h-5 w-5 text-arch-accent" />
-                      <h4 className="text-lg font-light tracking-wide text-arch-black">ADDRESS</h4>
+                      <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">CORPORATE ADDRESS</h4>
                     </div>
                     <div className="ml-9">
                       <address className="text-arch-medium font-light not-italic leading-relaxed">
-                        No 404, West Side to Kalyan Jewellers,<br />
-                        6th Street Extension,<br />
-                        Gandhipuram, Coimbatore,<br />
-                        Tamil Nadu - 641012
+                        #404 6th STREET EXTENSION,<br />
+                        GANDHIPURAM, COIMBATORE – 641012
                       </address>
                     </div>
                   </div>
@@ -199,14 +198,14 @@ const Contact = () => {
                   <div>
                     <div className="flex items-center space-x-4 mb-4">
                       <Phone className="h-5 w-5 text-arch-accent" />
-                      <h4 className="text-lg font-light tracking-wide text-arch-black">PHONE</h4>
+                      <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">PHONE</h4>
                     </div>
                     <div className="space-y-2 ml-9">
-                      <a href="tel:+919042514845" className="block text-arch-medium hover:text-arch-black arch-transition">
-                        +91 - 9042514845
+                      <a href="tel:04224950533" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        04224950533
                       </a>
-                      <a href="tel:+919486112301" className="block text-arch-medium hover:text-arch-black arch-transition">
-                        +91 - 9486112301
+                      <a href="tel:9042514845" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        9042514845
                       </a>
                     </div>
                   </div>
@@ -214,12 +213,9 @@ const Contact = () => {
                   <div>
                     <div className="flex items-center space-x-4 mb-4">
                       <Mail className="h-5 w-5 text-arch-accent" />
-                      <h4 className="text-lg font-light tracking-wide text-arch-black">EMAIL</h4>
+                      <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">EMAIL / WEBSITE</h4>
                     </div>
                     <div className="space-y-2 ml-9">
-                      <a href="mailto:thilak@tr-associates.in" className="block text-arch-medium hover:text-arch-black arch-transition">
-                        thilak@tr-associates.in
-                      </a>
                       <a href="mailto:design@tr-associates.in" className="block text-arch-medium hover:text-arch-black arch-transition">
                         design@tr-associates.in
                       </a>
@@ -248,7 +244,7 @@ const Contact = () => {
             {/* Left: Map */}
             <div className="w-full h-[450px] rounded-sm overflow-hidden shadow-sm border border-gray-100 animate-fade-in-left">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3268840673395!2d76.9642646740907!3d11.0116817547614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8590022f4625b%3A0xc3f587397e59b3!2s6th%20St%20Extension%2C%20Gandhipuram%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1711970000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=404%206th%20Street%20Extension,%20Gandhipuram,%20Coimbatore,%20Tamil%20Nadu%20641012&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -265,13 +261,12 @@ const Contact = () => {
               <div>
                 <div className="flex items-center space-x-4 mb-4">
                   <MapPin className="h-5 w-5 text-arch-accent" />
-                  <h4 className="text-lg font-light tracking-wide text-arch-black">Branch office address</h4>
+                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Branch office address</h4>
                 </div>
                 <div className="ml-9">
-                  <address className="text-arch-medium font-light not-italic leading-relaxed">
-                    No 404, West Side to Kalyan Jewellers,<br />
-                    6th Street Extension, Gandhipuram,<br />
-                    Coimbatore, Tamil Nadu 641012
+                  <address className="text-arch-medium font-light not-italic leading-relaxed uppercase">
+                    #6, PARASAKTHI NAGAR 1st MAIN ROAD, CAMP ROAD<br />
+                    SELAIYUR, CHENNAI – 600073
                   </address>
                 </div>
               </div>
@@ -280,14 +275,14 @@ const Contact = () => {
               <div>
                 <div className="flex items-center space-x-4 mb-4">
                   <Mail className="h-5 w-5 text-arch-accent" />
-                  <h4 className="text-lg font-light tracking-wide text-arch-black">General enquiries</h4>
+                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">General enquiries</h4>
                 </div>
                 <div className="ml-9 space-y-1">
-                  <a href="mailto:thilak@tr-associates.in" className="block text-arch-medium font-light hover:text-arch-black arch-transition">
-                    thilak@tr-associates.in
+                  <a href="mailto:traecons@gmail.com" className="block text-arch-medium font-light hover:text-arch-black arch-transition">
+                    traecons@gmail.com
                   </a>
-                  <a href="mailto:design@tr-associates.in" className="block text-arch-medium font-light hover:text-arch-black arch-transition">
-                    design@tr-associates.in
+                  <a href="https://www.tr-associates.in" target="_blank" rel="noopener noreferrer" className="block text-arch-medium font-light hover:text-arch-black arch-transition">
+                    www.tr-associates.in
                   </a>
                 </div>
               </div>
@@ -296,11 +291,10 @@ const Contact = () => {
               <div>
                 <div className="flex items-center space-x-4 mb-4">
                   <Phone className="h-5 w-5 text-arch-accent" />
-                  <h4 className="text-lg font-light tracking-wide text-arch-black">Call us</h4>
+                  <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Call us</h4>
                 </div>
                 <div className="ml-9 space-y-1 text-arch-medium font-light">
-                  <p>+91-9042514845</p>
-                  <p>+91-9486112301</p>
+                  <a href="tel:+919486112301" className="block hover:text-arch-black arch-transition">9486112301</a>
                 </div>
               </div>
 

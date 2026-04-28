@@ -27,22 +27,22 @@ export const FloatingContact = () => {
             <div>
               <h4 className="text-[#333333] text-lg font-medium mb-3">Contact Us</h4>
               <div className="space-y-2">
-                <a href="tel:+919042514845" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
+                <a href="tel:04224950533" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
                   <Phone className="w-3.5 h-3.5" />
-                  +91-9042514845
+                  04224950533
                 </a>
-                <a href="tel:+919486112301" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
+                <a href="tel:9042514845" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
                   <Phone className="w-3.5 h-3.5" />
-                  +91-9486112301
+                  9042514845
                 </a>
               </div>
             </div>
 
             <div>
               <h4 className="text-[#333333] text-lg font-medium mb-3">Mail Us</h4>
-              <a href="mailto:thilakranjith19@gmail.com" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
+              <a href="mailto:design@tr-associates.in" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
                 <Mail className="w-3.5 h-3.5" />
-                thilakranjith19@gmail.com
+                design@tr-associates.in
               </a>
             </div>
           </div>

@@ -78,7 +78,7 @@ export const AboutSection = () => {
                 <span className="block text-arch-accent">Planning Today</span>
               </h2>
               <p className="text-base font-light leading-relaxed text-arch-medium mb-6">
-                T.R Associates, Chennai & Coimbatore is a top player in the category of  Consultants for planning, designing & certifications utmost care &  understands the complete requirement of clients and provide the satisfactory services with professional excellence, we have completed  423 + Projects  for our customers in the span of 10 years
+                TR ASSOCIATES is an engineering and consultancy firm established in 2015 in Coimbatore, with a growing presence across Tamil Nadu. We provide end to end planning, design, and approval solutions for infrastructure projects, specializing in statutory clearances, structural and geotechnical engineering, LiDAR/GIS surveys, value engineering, structural peer review, and concrete Non Destructive Testing (NDT). Our mission is to simplify the process for clients developing infrastructure in Tamil Nadu, offering one stop, collaboration driven services from approvals to integrated construction and MEP systems.
               </p>
               <p className="text-base font-light leading-relaxed text-arch-medium">
                 We the consultants registered with the government for the services we offered for our clients  the and you can trust/rely on our efficient services. From initiation of the project to successful completion of the projects, we assure our expert workforce/team  provides best suitable possible infrastructure development of all your needs.
@@ -235,8 +235,7 @@ export const AboutSection = () => {
             <div className="arch-line mx-auto" />
           </div>
           <blockquote className="text-2xl md:text-3xl font-light tracking-wide text-arch-black italic mb-6">
-            "Our mission is to transform architectural visions into reality through innovative design, 
-            meticulous engineering, and unwavering commitment to quality."
+            "We Believe In Serving You The Safe And Aesthetic Infrastructure Development"
           </blockquote>
           <p className="text-sm font-light tracking-widest uppercase text-arch-medium">
             — TR Associates

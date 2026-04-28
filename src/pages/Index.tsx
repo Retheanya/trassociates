@@ -12,8 +12,10 @@ import { FoundationSection } from '@/components/FoundationSection';
 import { ClientStories } from '@/components/ClientStories';
 import { SurveyorTeam } from '@/components/SurveyorTeam';
 import { Footer } from '@/components/Footer';
+import { ProprietorSection } from '@/components/ProprietorSection';
 
 const Index = () => {
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -45,10 +47,14 @@ const Index = () => {
       {/* Awards Section */}
       <AwardsSection />
 
+      {/* Proprietor Section */}
+      <ProprietorSection />
+
       {/* Testimonials Section */}
       <TestimonialsSection />
 
       {/* Foundation Section */}
+
       <FoundationSection />
 
       {/* Client Success Stories */}

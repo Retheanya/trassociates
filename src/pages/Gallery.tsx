@@ -3,31 +3,51 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { EnquiryDialog } from '@/components/EnquiryDialog';
 import { Button } from '@/components/ui/button';
-import archConcept1 from '@/assets/arch-concept-1.jpg';
-import archExterior1 from '@/assets/arch-exterior-1.jpg';
-import archInterior1 from '@/assets/arch-interior-1.jpg';
-import archInterior2 from '@/assets/arch-interior-2.jpg';
-import heroSlide1 from '@/assets/hero-slide-1.jpg';
-import heroSlide2 from '@/assets/hero-slide-2.jpg';
-import heroSlide3 from '@/assets/hero-slide-3.jpg';
-import heroSlide4 from '@/assets/hero-slide-4.jpg';
 import galleryImg from '@/assets/gallery.jpg';
+import gallery1 from '@/assets/gallery1.jpeg';
+import gallery2 from '@/assets/gallery2.jpeg';
+import gallery3 from '@/assets/gallery3.jpeg';
+import gallery4 from '@/assets/gallery4.jpeg';
+import gallery5 from '@/assets/gallery5.jpeg';
+import gallery6 from '@/assets/gallery6.jpeg';
+import gallery7 from '@/assets/gallery7.jpeg';
+import gallery8 from '@/assets/gallery8.jpeg';
+import gallery9 from '@/assets/gallery9.jpeg';
+import gallery10 from '@/assets/gallery10.jpeg';
+import gallery11 from '@/assets/gallery11.jpeg';
+import gallery12 from '@/assets/gallery12.jpeg';
+import gallery13 from '@/assets/gallery13.jpeg';
+import gallery14 from '@/assets/gallery14.jpeg';
+import gallery15 from '@/assets/gallery15.jpeg';
+import gallery16 from '@/assets/gallery16.jpeg';
+import gallery17 from '@/assets/gallery17.jpeg';
+import gallery18 from '@/assets/gallery18.jpeg';
+import gallery19 from '@/assets/gallery19.jpeg';
 
 const Gallery = () => {
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
 
   const galleryImages = [
-    { src: "https://image3.jdomni.in/banner/27072021/37/E2/78/909345AA70B7459BFD7C99907D_1627329100838.jpg?output-format=webp", title: 'Architectural Concept' },
-    { src: "https://image2.jdomni.in/banner/27072021/E5/63/89/ED99E7F10FEAE3BDA17F10C25B_1627329083575.png?output-format=webp", title: 'Exterior Design' },
-    { src: "https://image1.jdomni.in/banner/27072021/60/D2/05/4F43230D2B2FFCD4178B78F59B_1627329084246.jpg?output-format=webp", title: 'Interior Design' },
-    { src: "https://image3.jdomni.in/banner/27072021/35/49/90/F5F89F3611D396AD7F76AEAF7E_1627328990054.jpeg?output-format=webp", title: 'Modern Interior' },
-    { src: "https://image2.jdomni.in/banner/27072021/A1/DC/09/EAF8201D542A24C262C74F465A_1627328990396.jpg?output-format=webp", title: 'Project View 1' },
-    { src: "https://image1.jdomni.in/banner/27072021/08/6B/D4/BB9CED18328DB081DC4D347B8F_1627328991271.jpeg?output-format=webp", title: 'Project View 2' },
-    { src: "https://image3.jdomni.in/banner/27072021/BD/21/7C/50B3EFB4E329A4DED1819C4667_1627328991434.jpeg?output-format=webp", title: 'Project View 3' },
-    { src: "https://image2.jdomni.in/banner/27072021/0F/78/91/9988A4D56EA1614B80D6F103DC_1627328937855.jpg?output-format=webp", title: 'Project View 4' },
-    { src: "https://image2.jdomni.in/banner/27072021/0F/78/91/9988A4D56EA1614B80D6F103DC_1627328937855.jpg?output-format=webp", title: 'Project View 4' },
-    { src: "https://image1.jdomni.in/banner/27072021/C6/D8/E8/1327A85C105C8C49CC7D6AB856_1627328836317.jpeg?output-format=webp", title: "Project view 5"}
+    { src: gallery1, title: 'Architectural Planning' },
+    { src: gallery2, title: 'Structural Design' },
+    { src: gallery3, title: 'Exterior Elevation' },
+    { src: gallery4, title: 'Interior Concept' },
+    { src: gallery5, title: 'Site Inspection' },
+    { src: gallery6, title: 'Industrial Structure' },
+    { src: gallery7, title: 'Commercial Complex' },
+    { src: gallery8, title: 'Residential Project' },
+    { src: gallery9, title: 'Modern Architecture' },
+    { src: gallery10, title: 'RCC Framework' },
+    { src: gallery11, title: 'Foundation Work' },
+    { src: gallery12, title: 'Land Surveying' },
+    { src: gallery13, title: 'Building Assessment' },
+    { src: gallery14, title: 'Project Management' },
+    { src: gallery15, title: 'Quality Control' },
+    { src: gallery16, title: 'Sustainable Design' },
+    { src: gallery17, title: 'Urban Planning' },
+    { src: gallery18, title: 'Steel Fabrication' },
+    { src: gallery19, title: 'Civil Engineering' }
   ];
 
   return (

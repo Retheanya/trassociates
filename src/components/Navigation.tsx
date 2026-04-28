@@ -11,7 +11,7 @@ export const Navigation = () => {
     // { label: 'Capabilities', href: '/capabilities' },
     { label: 'Services', href: '/services' },
     { label: 'Our Clients', href: '/clients' },
-    // { label: 'Gallery', href: '/gallery' },
+    { label: 'Gallery', href: '/gallery' },
     { label: 'Contact', href: '/contact' },
   ];
 
