@@ -11,9 +11,9 @@
       "director": "T.R Associates Team",
       "imageName": "rcc5",
       "imageNames": [
-        "rcc1",
-        "rcc2",
-        "rcc3",
+        "g10",
+        "g14",
+        "g15",
         "rcc4"
       ],
       "serviceDescription": "Comprehensive RCC design and detailing services for residential and commercial structures."
@@ -179,6 +179,40 @@
         "property1"
       ],
       "serviceDescription": "Professional property valuation services for residential and commercial properties."
+    },
+    {
+      "id": 11,
+      "title": "COMPETENT ENGINEER/DISH, GOVT OF TAMILNADU",
+      "description": "Authorized competent engineer services approved by the Directorate of Industrial Safety and Health (DISH), Government of Tamil Nadu. We provide specialized safety audits, machinery fitness certifications, and statutory compliance reporting for industrial units. Our expertise ensures that factories and industries operate within the legal framework while maintaining the highest safety standards.",
+      "category": "GOVERNMENT APPROVAL",
+      "year": "2024",
+      "location": "Tamil Nadu",
+      "type": "Statutory Services",
+      "director": "T.R Associates Team",
+      "imageName": "character-engineer",
+      "imageNames": [
+        "character-engineer",
+        "certificate1",
+        "certificate2"
+      ],
+      "serviceDescription": "Authorized competent engineer services approved by DISH, Government of Tamil Nadu."
+    },
+    {
+      "id": 12,
+      "title": "DISTRICT COLLECTOR'S PANEL OF ENGINEERS – CLASS 1A",
+      "description": "Expert engineering services provided by Class 1A registered engineers on the District Collector's panel. We specialize in structural stability certification, public building assessments, and government-approved technical evaluations for major infrastructure projects. Our Class 1A status signifies the highest level of competence and authority in structural engineering for public safety.",
+      "category": "CERTIFICATION",
+      "year": "2024",
+      "location": "Coimbatore, Tamil Nadu",
+      "type": "Public Safety Services",
+      "director": "T.R Associates Team",
+      "imageName": "civil-certificate",
+      "imageNames": [
+        "civil-certificate",
+        "certificate3",
+        "certificate4"
+      ],
+      "serviceDescription": "Expert engineering services by Class 1A registered engineers on the District Collector's panel."
     }
   ]
 }

@@ -33,19 +33,20 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Replace with your actual API endpoint
-      const API_URL = import.meta.env.VITE_CONTACT_API_URL || 'https://api.example.com/contact';
+      // Using Formspree for direct email delivery to design@tr-associates.in
+      // Note: You will need to verify your email at formspree.io after the first submission
+      const FORMSPREE_ENDPOINT = "https://formspree.io/f/design@tr-associates.in"; 
       
-      const response = await axios.post(API_URL, formData, {
+      const response = await axios.post(FORMSPREE_ENDPOINT, formData, {
         headers: {
-          'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
       });
 
-      if (response.status === 200 || response.status === 201) {
+      if (response.status === 200) {
         toast({
           title: "Message Sent Successfully",
-          description: "Thank you for contacting us. We'll get back to you soon.",
+          description: "Your message has been sent directly to our design team.",
         });
         
         // Reset form
@@ -58,13 +59,16 @@ const Contact = () => {
         });
       }
     } catch (error) {
-      const axiosError = error as AxiosError<{ message?: string }>;
-      console.error('Error submitting form:', axiosError);
+      console.error('Error submitting form:', error);
       toast({
-        title: "Error",
-        description: axiosError.response?.data?.message || "Failed to send message. Please try again later.",
-        variant: "destructive",
+        title: "Submission Status",
+        description: "If this is your first time, please check your email to verify the Formspree connection.",
+        variant: "default",
       });
+      
+      // Fallback: Open local email client if API fails
+      const mailtoLink = `mailto:design@tr-associates.in?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`)}`;
+      window.location.href = mailtoLink;
     } finally {
       setIsSubmitting(false);
     }

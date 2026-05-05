@@ -51,6 +51,11 @@ import property2 from '@/assets/property2.jpg';
 import property3 from '@/assets/property3.jpg';
 import property4 from '@/assets/property4.jpg';
 import property5 from '@/assets/property5.jpg';
+import g10 from '@/assets/g10.jpeg';
+import g14 from '@/assets/g14.jpeg';
+import g15 from '@/assets/g15.jpeg';
+import characterEngineer from '@/assets/charater_engineer_certificate.jpeg';
+import civilCertificate from '@/assets/civil_certificate.jpeg';
 
 const imageMap: Record<string, string> = {
   'arch-interior-1': archInterior1,
@@ -106,6 +111,11 @@ const imageMap: Record<string, string> = {
   'property3': property3,
   'property4': property4,
   'property5': property5,
+  'g10': g10,
+  'g14': g14,
+  'g15': g15,
+  'character-engineer': characterEngineer,
+  'civil-certificate': civilCertificate,
 };
 
 export const getImageFromName = (imageName: string): string => {

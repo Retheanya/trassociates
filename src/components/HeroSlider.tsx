@@ -112,7 +112,7 @@ export const HeroSlider = () => {
           
           <div className="overflow-hidden">
             <h1 
-              className={`text-6xl md:text-7xl font-light tracking-wide leading-tight mb-6 transition-all duration-1500 delay-200 ${
+              className={`text-4xl md:text-7xl font-light tracking-wide leading-tight mb-6 transition-all duration-1500 delay-200 ${
                 isTransitioning ? 'translate-y-12 opacity-0' : 'translate-y-0 opacity-100'
               }`}
             >

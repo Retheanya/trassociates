@@ -17,16 +17,16 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-content-bg/95 backdrop-blur-sm border-b border-arch-light/50">
-      <div className="flex items-center justify-between px-8">
+      <div className="flex items-center justify-between px-4 md:px-8">
         {/* Logo */}
         <a href='/'>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 md:space-x-4">
             <img 
               src={logo} 
               alt="TR Associates" 
-              className="h-24 w-24 object-contain"
+              className="h-16 w-16 md:h-24 md:w-24 object-contain"
             />
-            <h1 className="text-xl font-bold text-arch-black font-sans">
+            <h1 className="text-lg md:text-xl font-bold text-arch-black font-sans">
               TR Associates
             </h1>
           </div>

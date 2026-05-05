@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import servicesData from '@/data/services.json';
 import { getImageFromName } from '@/utils/imageMapper';
-import { Building2, HardHat, FileText, MapPin, TestTube, Home, Shield, Factory, ClipboardCheck, IndianRupee as RupeeIcon } from 'lucide-react';
+import { Building2, HardHat, FileText, MapPin, TestTube, Home, Shield, Factory, ClipboardCheck, IndianRupee as RupeeIcon, ShieldCheck, Award } from 'lucide-react';
 
 // Map service titles to icons
 const iconMap: Record<string, typeof Building2> = {
@@ -15,6 +15,8 @@ const iconMap: Record<string, typeof Building2> = {
   'Industrial Structural Designing': Factory,
   'Structural Stability Assessment': ClipboardCheck,
   'Property Valuers': RupeeIcon,
+  'COMPETENT ENGINEER/DISH, GOVT OF TAMILNADU': ShieldCheck,
+  'DISTRICT COLLECTOR’S PANEL OF ENGINEERS – CLASS 1A': Award,
 };
 
 const projects = servicesData.projects.map(project => ({

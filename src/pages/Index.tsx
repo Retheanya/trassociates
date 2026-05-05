@@ -13,6 +13,8 @@ import { ClientStories } from '@/components/ClientStories';
 import { SurveyorTeam } from '@/components/SurveyorTeam';
 import { Footer } from '@/components/Footer';
 import { ProprietorSection } from '@/components/ProprietorSection';
+import client1 from '@/assets/client1.jpg';
+import client2 from '@/assets/client2.jpg';
 
 const Index = () => {
 
@@ -26,14 +28,14 @@ const Index = () => {
       {/* Projects Section */}
       <ServicesSection />
       {/* Split Screen Layout */}
-      <div className="flex h-screen">
+      <div className="flex flex-col lg:flex-row min-h-screen lg:h-screen">
         {/* Left Half - Image Slider */}
-        <div className="w-1/2 relative">
+        <div className="w-full lg:w-1/2 h-[50vh] lg:h-full relative">
           <ImageSlider />
         </div>
         
         {/* Right Half - Content Panel */}
-        <div className="w-1/2 relative">
+        <div className="w-full lg:w-1/2 min-h-[50vh] lg:h-full relative">
           <ContentPanel />
         </div>
       </div>
@@ -50,6 +52,19 @@ const Index = () => {
       {/* Proprietor Section */}
       <ProprietorSection />
 
+      {/* Certificates Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto shadow-2xl">
+            <img 
+              src={client1} 
+              alt="Proprietor Certificates" 
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <TestimonialsSection />
 
@@ -65,6 +80,19 @@ const Index = () => {
 
       {/* Ambitious Clients Section */}
       {/* <AmbitiousClients /> */}
+
+      {/* Clients Logo Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto shadow-2xl">
+            <img 
+              src={client2} 
+              alt="Worked Companies" 
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Phone, Mail, Headphones, X, Minus, Settings, BrickWall } from 'lucide-react';
+import { Phone, Mail, Headphones, X, Minus, Settings, BrickWall, Download } from 'lucide-react';
+import bro1 from '@/assets/bro1.jpeg';
+import bro2 from '@/assets/bro2.jpeg';
 
 export const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,6 +46,28 @@ export const FloatingContact = () => {
                 <Mail className="w-3.5 h-3.5" />
                 design@tr-associates.in
               </a>
+            </div>
+
+            <div>
+              <h4 className="text-[#333333] text-lg font-medium mb-3">Brochures</h4>
+              <div className="space-y-2">
+                <a 
+                  href={bro1} 
+                  download="TR-Associates-Brochure-1.jpg"
+                  className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Download Brochure 1
+                </a>
+                <a 
+                  href={bro2} 
+                  download="TR-Associates-Brochure-2.jpg"
+                  className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Download Brochure 2
+                </a>
+              </div>
             </div>
           </div>
         </div>

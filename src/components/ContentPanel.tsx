@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const ContentPanel = () => {
   return (
-    <div className="h-screen bg-content-bg flex flex-col justify-center px-12 lg:px-16 xl:px-24 pb-32 lg:pb-0 relative">
+    <div className="min-h-screen lg:h-screen bg-content-bg flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-0 relative">
       <div className="max-w-xl">
         {/* Project Label */}
         <div className="flex items-center space-x-4 mb-8">
@@ -15,7 +15,7 @@ export const ContentPanel = () => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="arch-title text-5xl lg:text-6xl xl:text-7xl mb-6 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+        <h1 className="arch-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
           Minimal
           <br />
           Architecture
@@ -49,7 +49,7 @@ export const ContentPanel = () => {
 
       {/* Scroll Indicator - Positioned precisely to avoid overlap */}
 
-      <div className="absolute bottom-12 left-12 lg:left-16 xl:left-24 flex items-end space-x-4 h-24">
+      <div className="absolute bottom-12 left-6 md:left-12 lg:left-16 xl:left-24 flex items-end space-x-4 h-24">
         <div className="w-px h-full bg-arch-light" />
         <span className="text-[10px] font-light tracking-widest uppercase text-arch-medium -rotate-90 origin-bottom-left translate-y-2">
           Scroll

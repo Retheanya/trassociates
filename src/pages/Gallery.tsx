@@ -23,6 +23,22 @@ import gallery16 from '@/assets/gallery16.jpeg';
 import gallery17 from '@/assets/gallery17.jpeg';
 import gallery18 from '@/assets/gallery18.jpeg';
 import gallery19 from '@/assets/gallery19.jpeg';
+import g1 from '@/assets/g1.jpeg';
+import g2 from '@/assets/g2.jpeg';
+import g3 from '@/assets/g3.jpeg';
+import g4 from '@/assets/g4.jpeg';
+import g5 from '@/assets/g5.jpeg';
+import g6 from '@/assets/g6.jpeg';
+import pdf1 from '@/assets/pdf1.jpg';
+import pdf2 from '@/assets/pdf2.jpg';
+import g7 from '@/assets/g7.jpeg';
+import g8 from '@/assets/g8.jpeg';
+import g9 from '@/assets/g9.jpeg';
+import g11 from '@/assets/g11.jpeg';
+import g12 from '@/assets/g12.jpeg';
+import g13 from '@/assets/g13.jpeg';
+import g16 from '@/assets/g16.jpeg';
+import g17 from '@/assets/g17.jpeg';
 
 const Gallery = () => {
   const [enquiryOpen, setEnquiryOpen] = useState(false);
@@ -47,7 +63,23 @@ const Gallery = () => {
     { src: gallery16, title: 'Sustainable Design' },
     { src: gallery17, title: 'Urban Planning' },
     { src: gallery18, title: 'Steel Fabrication' },
-    { src: gallery19, title: 'Civil Engineering' }
+    { src: gallery19, title: 'Civil Engineering' },
+    { src: g1, title: 'Modern Villa Design' },
+    { src: g2, title: 'Luxury Residential Project' },
+    { src: g3, title: 'Urban Infrastructure' },
+    { src: g4, title: 'Contemporary Architecture' },
+    { src: g5, title: 'Commercial Development' },
+    { src: g6, title: 'Industrial Facility' },
+    { src: pdf1, title: 'Architectural Blueprint' },
+    { src: pdf2, title: 'Structural Layout' },
+    { src: g7, title: 'Modern Exterior' },
+    { src: g8, title: 'Residential Interior' },
+    { src: g9, title: 'Urban Space' },
+    { src: g11, title: 'Industrial Framework' },
+    { src: g12, title: 'Commercial Design' },
+    { src: g13, title: 'Building Structure' },
+    { src: g16, title: 'Sustainable Architecture' },
+    { src: g17, title: 'Urban Planning Project' }
   ];
 
   return (
