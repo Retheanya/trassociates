@@ -205,11 +205,11 @@ const Contact = () => {
                       <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">PHONE</h4>
                     </div>
                     <div className="space-y-2 ml-9">
-                      <a href="tel:04224950533" className="block text-arch-medium hover:text-arch-black arch-transition">
-                        04224950533
+                      <a href="tel:+9104224950533" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        +91 04224950533
                       </a>
-                      <a href="tel:9042514845" className="block text-arch-medium hover:text-arch-black arch-transition">
-                        9042514845
+                      <a href="tel:+919042514845" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        +91 9042514845
                       </a>
                     </div>
                   </div>
@@ -298,7 +298,7 @@ const Contact = () => {
                   <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Call us</h4>
                 </div>
                 <div className="ml-9 space-y-1 text-arch-medium font-light">
-                  <a href="tel:+919486112301" className="block hover:text-arch-black arch-transition">9486112301</a>
+                  <a href="tel:+919486112301" className="block hover:text-arch-black arch-transition">+91 9486112301</a>
                 </div>
               </div>
 

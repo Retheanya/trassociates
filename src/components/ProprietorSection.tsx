@@ -59,13 +59,13 @@ export const ProprietorSection = () => {
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm md:text-base font-light leading-relaxed text-arch-medium max-w-xl text-justify">
+                <p className="text-base font-light leading-relaxed text-arch-medium max-w-xl text-left md:text-justify">
                   <span className="font-medium text-arch-black">TR ASSOCIATES</span> has over 13 years of experience in engineering and construction, 
-                  including obtaining planning permissions from <span className="italic">DTCP, Municipal Corporations, Panchayats, CMDA, and LPA</span> for projects, 
+                  including obtaining planning permissions from <span className="font-medium text-arch-black">DTCP, Municipal Corporations, Panchayats, CMDA, and LPA</span> for projects, 
                   as well as securing all statutory clearances required to start infrastructure projects in Tamil Nadu.
                 </p>
 
-                <p className="text-xs md:text-base font-light leading-relaxed text-arch-medium max-w-xl text-justify">
+                <p className="text-base font-light leading-relaxed text-arch-medium max-w-xl text-left md:text-justify">
                   He is experienced in civil structural engineering, surveying, geotechnical design, and liaising with government departments to ensure 
                   hassle free permission procedures. He has successfully delivered <span className="text-arch-accent font-normal">500+ projects</span> in engineering and consultancy. 
                   He has also been empaneled with almost all government departments for his competence in civil engineering.

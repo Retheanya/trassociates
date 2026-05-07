@@ -29,14 +29,14 @@ const projects = servicesData.projects.map(project => ({
 
 export const ServicesSection = () => {
   return (
-    <section className="py-20 bg-content-light">
-      <div className="container mx-auto px-6">
+    <section className="py-12 md:py-20 bg-content-light">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <p className="text-sm font-light tracking-widest uppercase text-arch-medium mb-4">
+        <div className="text-center mb-10 md:mb-16 animate-fade-in-up">
+          <p className="text-xs sm:text-sm font-light tracking-widest uppercase text-arch-medium mb-3 sm:mb-4">
             WE STAND FOR
           </p>
-          <h2 className="text-5xl md:text-6xl font-light tracking-wide text-arch-black">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-light tracking-wide text-arch-black leading-tight">
             Having an idea. Creating spaces.
           </h2>
         </div>
