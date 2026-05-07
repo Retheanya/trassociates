@@ -178,11 +178,10 @@ export const TestimonialsSection = () => {
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
                     ? 'bg-arch-accent w-8'
                     : 'bg-arch-black/20 hover:bg-arch-black/40'
-                }`}
+                  }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}

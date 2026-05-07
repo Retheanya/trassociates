@@ -30,7 +30,7 @@ export const FoundationSection = () => {
                 We seek an advice to the conversion of our old buildings for better functional requirements as of current trends to fetch good income for our property in a prime location, really thoughtful engineer, sense of creativeness, good
               </p>
             </div>
-            
+
             <div className="pt-4">
               <p className="text-sm font-light tracking-widest uppercase text-arch-medium">
                 — PROJECT TESTIMONIAL

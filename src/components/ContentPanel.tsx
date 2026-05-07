@@ -28,11 +28,11 @@ export const ContentPanel = () => {
 
         {/* Description */}
         <p className="arch-body text-base lg:text-lg mb-12 max-w-md animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-          Creating spaces that blend functionality with aesthetic excellence. 
-          Our architectural approach emphasizes clean lines, natural materials, 
+          Creating spaces that blend functionality with aesthetic excellence.
+          Our architectural approach emphasizes clean lines, natural materials,
           and the harmony between form and environment.
         </p>
-        
+
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 mb-16 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
           <Button variant="arch" size="arch">
@@ -57,4 +57,4 @@ export const ContentPanel = () => {
       </div>
     </div>
   );
-};
+};

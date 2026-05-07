@@ -49,7 +49,7 @@ export const AboutSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-arch-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
             </div>
-            
+
             {/* Floating Stats Card */}
             <div className="absolute -bottom-8 -right-8 bg-white shadow-2xl p-8 w-64 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <div className="flex items-center gap-4 mb-4">
@@ -107,7 +107,7 @@ export const AboutSection = () => {
 
         {/* Values Section */}
       </div>
-      
+
       <div className="relative bg-content-light py-16 md:py-20">
         <div className="container mx-auto px-6">
           {/* Background Image */}
@@ -173,7 +173,7 @@ export const AboutSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-arch-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
             </div>
-            
+
             {/* Minimal Decorative Badge */}
             <div className="absolute -top-4 -left-4 bg-arch-accent px-6 py-4 shadow-xl animate-fade-in-up" style={{ animationDelay: '400ms' }}>
               <div className="text-white text-lg font-light">Trusted</div>

@@ -9,9 +9,9 @@ export const Footer = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-4 mb-6">
-              <img 
-                src={trLogo} 
-                alt="TR Associates" 
+              <img
+                src={trLogo}
+                alt="TR Associates"
                 className="h-12 w-12 object-contain"
               />
               <h3 className="text-xl font-extralight tracking-widest">
@@ -19,8 +19,8 @@ export const Footer = () => {
               </h3>
             </div>
             <p className="text-arch-light font-light leading-relaxed mb-6 max-w-md">
-              Creating spaces that blend functionality with aesthetic excellence. 
-              Our architectural approach emphasizes clean lines, natural materials, 
+              Creating spaces that blend functionality with aesthetic excellence.
+              Our architectural approach emphasizes clean lines, natural materials,
               and the harmony between form and environment.
             </p>
             <div className="arch-line bg-white/30" />
@@ -39,7 +39,7 @@ export const Footer = () => {
               ].map((link) => (
 
                 <li key={link.label}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-arch-light hover:text-white arch-transition"
                   >
@@ -71,7 +71,7 @@ export const Footer = () => {
               <div className="flex flex-col space-y-2">
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-arch-accent" />
-                  <a 
+                  <a
                     href="mailto:design@tr-associates.in"
                     className="text-arch-light hover:text-white arch-transition"
                   >
@@ -92,9 +92,9 @@ export const Footer = () => {
             <span>Made with</span>
             <Heart className="h-3.5 w-3.5 text-white fill-white animate-pulse" />
             <span>by</span>
-            <a 
-              href="https://technovuz.com" 
-              target="_blank" 
+            <a
+              href="https://technovuz.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-arch-accent transition-colors duration-300 font-normal"
             >

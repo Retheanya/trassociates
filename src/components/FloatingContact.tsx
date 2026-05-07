@@ -14,9 +14,9 @@ export const FloatingContact = () => {
           {/* Left Dark Section */}
           <div className="w-1/3 bg-[#4A4A4A] flex items-center justify-center py-10 relative">
             <Headphones className="w-12 h-12 text-white/90" />
-            
+
             {/* Minimal Close Button */}
-            <button 
+            <button
               onClick={() => setIsOpen(false)}
               className="absolute top-2 right-2 bg-white rounded-full p-1 shadow-md hover:bg-gray-100 transition-colors"
             >
@@ -51,16 +51,16 @@ export const FloatingContact = () => {
             <div>
               <h4 className="text-[#333333] text-lg font-medium mb-3">Brochures</h4>
               <div className="space-y-2">
-                <a 
-                  href={bro1} 
+                <a
+                  href={bro1}
                   download="TR-Associates-Brochure-1.jpg"
                   className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm"
                 >
                   <Download className="w-3.5 h-3.5" />
                   Download Brochure 1
                 </a>
-                <a 
-                  href={bro2} 
+                <a
+                  href={bro2}
                   download="TR-Associates-Brochure-2.jpg"
                   className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm"
                 >
@@ -81,9 +81,9 @@ export const FloatingContact = () => {
       >
         <div className="relative w-8 h-8 flex flex-col items-center justify-end">
           {/* Top part: Gear-like shape */}
-          <Settings className={`w-6 h-6 text-arch-accent mb-[-3px] animate-spin-slow ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
+          <Settings className={`w-6 h-6 text-arch-accent mb-[-3px] animate-spin-slow ${isOpen ? 'opacity-100' : 'opacity-100'}`} />
           {/* Bottom part: Bricks */}
-          <div className="flex flex-col gap-0.5 w-full">
+          {/* <div className="flex flex-col gap-0.5 w-full">
             <div className="flex gap-0.5 justify-center">
               <div className="w-3.5 h-1.5 bg-arch-black rounded-sm" />
               <div className="w-3.5 h-1.5 bg-arch-black rounded-sm" />
@@ -93,7 +93,7 @@ export const FloatingContact = () => {
               <div className="w-3.5 h-1.5 bg-arch-black rounded-sm" />
               <div className="w-2 h-1.5 bg-arch-black rounded-sm" />
             </div>
-          </div>
+          </div> */}
         </div>
       </button>
     </div>

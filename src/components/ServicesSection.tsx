@@ -46,7 +46,7 @@ export const ServicesSection = () => {
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
-              <div 
+              <div
                 key={project.id}
                 className="group cursor-pointer animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
@@ -63,7 +63,7 @@ export const ServicesSection = () => {
                       <IconComponent className="w-6 h-6 text-arch-accent" />
                     </div>
                   </div>
-                  
+
                   <div className="p-8">
                     <div className="arch-line mb-4 transition-all duration-300 group-hover:w-16" />
                     <h3 className="text-xl font-light tracking-wide text-arch-black mb-2">
@@ -76,8 +76,8 @@ export const ServicesSection = () => {
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-arch-black/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button 
-                      variant="arch" 
+                    <Button
+                      variant="arch"
                       size="arch"
                       onClick={() => window.location.href = `/services/${project.id}`}
                     >

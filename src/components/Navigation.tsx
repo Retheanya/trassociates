@@ -21,14 +21,19 @@ export const Navigation = () => {
         {/* Logo */}
         <a href='/'>
           <div className="flex items-center space-x-2 md:space-x-4">
-            <img 
-              src={logo} 
-              alt="TR Associates" 
+            <img
+              src={logo}
+              alt="TR Associates"
               className="h-16 w-16 md:h-24 md:w-24 object-contain"
             />
-            <h1 className="text-lg md:text-xl font-bold text-arch-black font-sans">
-              TR Associates
-            </h1>
+            <div className="flex flex-col">
+              <h1 className="text-xl md:text-2xl font-bold tracking-tight leading-none">
+                <span className="text-green-600">TR</span> <span className="text-orange-500">ASSOCIATES</span>
+              </h1>
+              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-arch-medium font-medium">
+                Engineering & Consultation
+              </span>
+            </div>
           </div>
         </a>
 
@@ -38,7 +43,7 @@ export const Navigation = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-md font-light tracking-wide text-arch-medium hover:text-arch-black arch-transition"
+              className="text-md font-normal tracking-wide text-arch-medium hover:text-arch-black arch-transition"
             >
               {item.label}
             </a>
