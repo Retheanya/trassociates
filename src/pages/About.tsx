@@ -97,8 +97,12 @@ const About = () => {
       </section>
 
       {/* Company Overview */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
+      <section className="py-24 relative overflow-hidden">
+        {/* Subtle Architectural Pattern */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none z-0" 
+             style={{ backgroundImage: `linear-gradient(#14532D 0.5px, transparent 0.5px), linear-gradient(90deg, #14532D 0.5px, transparent 0.5px)`, backgroundSize: '100px 100px' }}></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-green-50 rounded-full -z-10 blur-3xl"></div>
@@ -149,8 +153,13 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-24 relative overflow-hidden bg-gray-50/50">
+        {/* Architectural Grid Background */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-0" 
+             style={{ backgroundImage: `radial-gradient(#14532D 1px, transparent 1px)`, backgroundSize: '32px 32px' }}></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-green-600/5 to-transparent pointer-events-none"></div>
+        
+        <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-3xl mx-auto mb-20">
             <h2 className="text-sm font-bold text-green-600 tracking-[0.3em] uppercase mb-4">OUR VALUES</h2>
             <h3 className="text-4xl font-bold text-arch-black">The Principles That Build Our Foundation</h3>
@@ -158,12 +167,35 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, idx) => (
-              <div key={idx} className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group text-center">
-                <div className="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-green-600 mb-8 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300 mx-auto">
-                  {value.icon}
+              <div key={idx} className="group relative bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] border border-green-600/5 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden text-center">
+                {/* Background Index Number */}
+                <div className="absolute -top-4 -right-4 text-9xl font-bold text-gray-50 group-hover:text-green-50/50 transition-colors duration-500 select-none -z-0">
+                  0{idx + 1}
                 </div>
-                <h4 className="text-xl font-bold text-arch-black mb-4">{value.title}</h4>
-                <p className="text-arch-medium font-light leading-relaxed">{value.description}</p>
+                
+                {/* Hover Accent Top Border */}
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-600 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+
+                <div className="relative z-10">
+                  {/* Icon Container with multi-layered design */}
+                  <div className="relative w-20 h-20 mx-auto mb-10">
+                    <div className="absolute inset-0 bg-green-600/5 rounded-3xl rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
+                    <div className="absolute inset-0 bg-green-600/5 rounded-3xl -rotate-3 group-hover:-rotate-6 transition-transform duration-500"></div>
+                    <div className="relative w-full h-full bg-white rounded-3xl shadow-sm border border-gray-100 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-all duration-500">
+                      {value.icon}
+                    </div>
+                  </div>
+
+                  <h4 className="text-2xl font-bold text-arch-black mb-4 tracking-tight group-hover:text-green-600 transition-colors duration-300">
+                    {value.title}
+                  </h4>
+                  
+                  <div className="w-12 h-0.5 bg-gray-100 mx-auto mb-6 group-hover:w-20 group-hover:bg-orange-500 transition-all duration-500"></div>
+                  
+                  <p className="text-arch-medium font-light leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -171,8 +203,9 @@ const About = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-24 bg-white relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-50/30 to-transparent pointer-events-none"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mb-20">
             <h2 className="text-sm font-bold text-green-600 tracking-[0.3em] uppercase mb-4">OUR JOURNEY</h2>
             <h3 className="text-4xl font-bold text-arch-black">Decades of Structural Innovation</h3>
