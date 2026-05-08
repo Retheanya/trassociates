@@ -31,7 +31,7 @@ export const FloatingContact = () => {
               <div className="space-y-2">
                 <a href="tel:04224950533" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
                   <Phone className="w-3.5 h-3.5" />
-                  04224950533
+                  0422 4950533
                 </a>
                 <a href="tel:9042514845" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
                   <Phone className="w-3.5 h-3.5" />

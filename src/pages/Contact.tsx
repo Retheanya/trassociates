@@ -205,12 +205,18 @@ const Contact = () => {
                       <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">PHONE</h4>
                     </div>
                     <div className="space-y-2 ml-9">
-                      <a href="tel:+9104224950533" className="block text-arch-medium hover:text-arch-black arch-transition">
-                        +91 04224950533
-                      </a>
-                      <a href="tel:+919042514845" className="block text-arch-medium hover:text-arch-black arch-transition">
-                        +91 9042514845
-                      </a>
+                      <div className="flex items-center space-x-3">
+                        <span className="text-xs uppercase tracking-wider text-arch-medium/50 w-16">Landline</span>
+                        <a href="tel:04224950533" className="text-arch-medium hover:text-arch-black arch-transition">
+                          0422 4950533
+                        </a>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <span className="text-xs uppercase tracking-wider text-arch-medium/50 w-16">Mobile</span>
+                        <a href="tel:+919042514845" className="text-arch-medium hover:text-arch-black arch-transition">
+                          +91 9042514845
+                        </a>
+                      </div>
                     </div>
                   </div>
 

@@ -61,11 +61,17 @@ export const Footer = () => {
                   GANDHIPURAM, COIMBATORE – 641012
                 </address>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-arch-accent" />
-                <div className="flex flex-col space-y-1">
-                  <a href="tel:+9104224950533" className="text-arch-light hover:text-white arch-transition">+91 04224950533</a>
-                  <a href="tel:+919042514845" className="text-arch-light hover:text-white arch-transition">+91 9042514845</a>
+              <div className="flex items-start space-x-3">
+                <Phone className="h-5 w-5 text-arch-accent mt-0.5" />
+                <div className="flex flex-col space-y-1.5">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-[10px] uppercase tracking-wider text-white/40 w-16">Landline</span>
+                    <a href="tel:04224950533" className="text-arch-light hover:text-white arch-transition">0422 4950533</a>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span className="text-[10px] uppercase tracking-wider text-white/40 w-16">Mobile</span>
+                    <a href="tel:+919042514845" className="text-arch-light hover:text-white arch-transition">+91 9042514845</a>
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col space-y-2">
