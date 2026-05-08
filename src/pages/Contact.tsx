@@ -303,8 +303,11 @@ const Contact = () => {
                   <Phone className="h-5 w-5 text-arch-accent" />
                   <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Call us</h4>
                 </div>
-                <div className="ml-9 space-y-1 text-arch-medium font-light">
-                  <a href="tel:+919486112301" className="block hover:text-arch-black arch-transition">+91 9486112301</a>
+                <div className="ml-9 text-arch-medium font-light">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-xs uppercase tracking-wider text-arch-medium/50 w-16">Mobile</span>
+                    <a href="tel:+919486112301" className="hover:text-arch-black arch-transition">+91 9486112301</a>
+                  </div>
                 </div>
               </div>
 

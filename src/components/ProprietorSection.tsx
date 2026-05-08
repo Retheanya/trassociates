@@ -5,7 +5,7 @@ import proprietorImage from '@/assets/tilak.jpg';
 
 export const ProprietorSection = () => {
   return (
-    <section className="relative py-20 lg:h-screen lg:min-h-[700px] overflow-hidden flex items-center bg-arch-black/5">
+    <section className="relative py-24 overflow-hidden flex items-center bg-gray-50">
       {/* Background Image - updated to bgimage.jpg with improved visibility */}
       <div className="absolute inset-0 z-0">
         <img
@@ -25,7 +25,7 @@ export const ProprietorSection = () => {
         {/* Card visual like client testimonial */}
         <div className="max-w-6xl mx-auto bg-white shadow-xl p-6 md:p-12 lg:p-16 animate-fade-in-up">
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-            
+
             {/* Left Side: Real Color Image */}
             <div className="w-full lg:w-[40%] flex justify-center">
               <div className="relative group">
@@ -43,7 +43,7 @@ export const ProprietorSection = () => {
               <p className="text-sm font-light tracking-widest uppercase text-arch-medium mb-2">
                 THE PROPRIETOR
               </p>
-              
+
               <h2 className="text-3xl md:text-5xl font-light tracking-wide text-arch-black mb-6">
                 Tilak Ranjit
               </h2>
@@ -60,14 +60,14 @@ export const ProprietorSection = () => {
 
               <div className="space-y-4">
                 <p className="text-base font-light leading-relaxed text-arch-medium max-w-xl text-left md:text-justify">
-                  <span className="font-medium text-arch-black">TR ASSOCIATES</span> has over 13 years of experience in engineering and construction, 
-                  including obtaining planning permissions from <span className="font-medium text-arch-black">DTCP, Municipal Corporations, Panchayats, CMDA, and LPA</span> for projects, 
+                  <span className="font-medium text-arch-black">TR ASSOCIATES</span> has over 13 years of experience in engineering and construction,
+                  including obtaining planning permissions from <span className="font-medium text-arch-black">DTCP, Municipal Corporations, Panchayats, CMDA, and LPA</span> for projects,
                   as well as securing all statutory clearances required to start infrastructure projects in Tamil Nadu.
                 </p>
 
                 <p className="text-base font-light leading-relaxed text-arch-medium max-w-xl text-left md:text-justify">
-                  He is experienced in civil structural engineering, surveying, geotechnical design, and liaising with government departments to ensure 
-                  hassle free permission procedures. He has successfully delivered <span className="text-arch-accent font-normal">500+ projects</span> in engineering and consultancy. 
+                  He is experienced in civil structural engineering, surveying, geotechnical design, and liaising with government departments to ensure
+                  hassle free permission procedures. He has successfully delivered <span className="text-arch-accent font-normal">500+ projects</span> in engineering and consultancy.
                   He has also been empaneled with almost all government departments for his competence in civil engineering.
                 </p>
               </div>

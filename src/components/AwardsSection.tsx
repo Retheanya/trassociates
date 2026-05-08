@@ -50,7 +50,7 @@ export const AwardsSection = () => {
           {awards.map((award, index) => {
             const IconComponent = award.icon;
             return (
-              <div 
+              <div
                 key={award.title}
                 className="text-center group animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
@@ -59,21 +59,21 @@ export const AwardsSection = () => {
                   <div className="mb-6">
                     <IconComponent className="h-12 w-12 mx-auto text-arch-accent" />
                   </div>
-                  
+
                   <div className="arch-line mx-auto mb-6 transition-all duration-300 group-hover:w-16" />
-                  
+
                   <div className="text-xs font-light tracking-widest uppercase text-arch-accent mb-2">
                     {award.year}
                   </div>
-                  
+
                   <h3 className="text-lg font-light tracking-wide text-arch-black mb-2">
                     {award.title}
                   </h3>
-                  
+
                   <p className="text-sm font-light text-arch-medium mb-2">
                     {award.category}
                   </p>
-                  
+
                   <p className="text-xs font-light tracking-wide text-arch-light">
                     {award.project}
                   </p>

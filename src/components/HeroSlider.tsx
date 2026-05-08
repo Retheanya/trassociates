@@ -83,9 +83,8 @@ export const HeroSlider = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-all duration-1200 ease-out ${
-              index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
-            }`}
+            className={`absolute inset-0 transition-all duration-1200 ease-out ${index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
+              }`}
           >
             <img
               src={slide.image}
@@ -109,30 +108,27 @@ export const HeroSlider = () => {
               {slides[currentSlide].location}
             </p>
           </div> */}
-          
+
           <div className="overflow-hidden">
-            <h1 
-              className={`text-4xl md:text-7xl font-light tracking-wide leading-tight mb-6 transition-all duration-1500 delay-200 ${
-                isTransitioning ? 'translate-y-12 opacity-0' : 'translate-y-0 opacity-100'
-              }`}
+            <h1
+              className={`text-4xl md:text-7xl font-light tracking-wide leading-tight mb-6 transition-all duration-1500 delay-200 ${isTransitioning ? 'translate-y-12 opacity-0' : 'translate-y-0 opacity-100'
+                }`}
             >
               {slides[currentSlide].title}
             </h1>
           </div>
 
           <div className="overflow-hidden">
-            <p 
-              className={`text-lg font-light tracking-wide mb-8 transition-all duration-1500 delay-400 ${
-                isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
-              }`}
+            <p
+              className={`text-lg font-light tracking-wide mb-8 transition-all duration-1500 delay-400 ${isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
+                }`}
             >
               {slides[currentSlide].subtitle}
             </p>
           </div>
 
-          <div className={`transition-all duration-1500 delay-700 ${
-            isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
-          }`}>
+          <div className={`transition-all duration-1500 delay-700 ${isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
+            }`}>
             <Button variant="arch-outline" size="arch">
               EXPLORE IT
             </Button>
@@ -174,11 +170,10 @@ export const HeroSlider = () => {
               {String(index + 1).padStart(2, '0')}
             </span>
             <div
-              className={`h-px transition-all duration-300 ${
-                index === currentSlide
+              className={`h-px transition-all duration-300 ${index === currentSlide
                   ? 'w-8 bg-white'
                   : 'w-4 bg-white/50 group-hover:bg-white/70'
-              }`}
+                }`}
             />
           </button>
         ))}

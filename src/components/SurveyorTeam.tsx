@@ -28,7 +28,7 @@ export const SurveyorTeam = () => {
                 "Surveyor team done good job in our property measurements, they cleared our confusions and found out our boundaries & they matched in their drawings with the survey record and site boundaries promptly,"
               </p>
             </div>
-            
+
             <div className="pt-4">
               <p className="text-sm font-light text-arch-medium">
                 — Project testimonial

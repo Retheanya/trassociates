@@ -78,9 +78,8 @@ export const ImageSlider = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-800 ease-out ${
-              index === currentSlide ? 'opacity-100 animate-scale-in' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-800 ease-out ${index === currentSlide ? 'opacity-100 animate-scale-in' : 'opacity-0'
+              }`}
           >
             <img
               src={slide.image}
@@ -101,7 +100,7 @@ export const ImageSlider = () => {
         >
           <ChevronUp className="h-5 w-5" />
         </button>
-        
+
         {/* Page Indicators */}
         <div className="flex flex-col space-y-3">
           {slides.map((_, index) => (
@@ -113,18 +112,16 @@ export const ImageSlider = () => {
             >
               <div className="flex items-center space-x-2">
                 <div
-                  className={`h-px transition-all duration-300 ${
-                    index === currentSlide
+                  className={`h-px transition-all duration-300 ${index === currentSlide
                       ? 'w-8 bg-white'
                       : 'w-4 bg-white/50 group-hover:bg-white/70'
-                  }`}
+                    }`}
                 />
                 <span
-                  className={`text-xs font-light transition-colors duration-300 ${
-                    index === currentSlide
+                  className={`text-xs font-light transition-colors duration-300 ${index === currentSlide
                       ? 'text-white'
                       : 'text-white/50 group-hover:text-white/70'
-                  }`}
+                    }`}
                 >
                   {String(index + 1).padStart(2, '0')}
                 </span>
