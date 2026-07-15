@@ -1,39 +1,42 @@
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { fadeIn, fadeInUp, staggerContainer } from '@/lib/motion';
 import heroSlide1 from '@/assets/hero-slide-1.jpg';
 import heroSlide2 from '@/assets/hero-slide-2.jpg';
 import heroSlide3 from '@/assets/hero-slide-3.jpg';
 import heroSlide4 from '@/assets/hero-slide-4.jpg';
 
+// Updated slides data structure to match the new design
 const slides = [
   {
     id: 1,
     image: heroSlide1,
-    location: 'CASABLANCA',
-    title: 'Incredible Small Green Homes That Live Large',
-    subtitle: 'Sustainable Architecture'
+    topSubheading: '10+ YEARS OF CONSTRUCTION EXCELLENCE — COIMBATORE & NILGIRIS',
+    title: 'Building Dreams Into Reality',
+    bottomSubheading: 'Love begins at home'
   },
   {
     id: 2,
     image: heroSlide2,
-    location: 'MIAMI',
-    title: 'Contemporary Ocean Views',
-    subtitle: 'Residential Design'
+    topSubheading: 'INNOVATIVE DESIGN & QUALITY CRAFTSMANSHIP',
+    title: 'Modern Living, Redefined',
+    bottomSubheading: 'Where architecture meets art'
   },
   {
     id: 3,
     image: heroSlide3,
-    location: 'TOKYO',
-    title: 'Future Museum Complex',
-    subtitle: 'Cultural Architecture'
+    topSubheading: 'SUSTAINABLE & ECO-FRIENDLY SOLUTIONS',
+    title: 'Future-Forward Spaces',
+    bottomSubheading: 'Building a greener tomorrow'
   },
   {
     id: 4,
     image: heroSlide4,
-    location: 'NEW YORK',
-    title: 'Urban Skyscraper Design',
-    subtitle: 'Commercial Architecture'
+    topSubheading: 'COMMERCIAL & RESIDENTIAL PROJECTS',
+    title: 'Architecture That Inspires',
+    bottomSubheading: 'From concept to completion'
   }
 ];
 
@@ -42,151 +45,92 @@ export const HeroSlider = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const nextSlide = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  const prevSlide = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    if (isTransitioning || index === currentSlide) return;
-    setIsTransitioning(true);
-    setCurrentSlide(index);
-  };
-
+  // Set transition state based on slide changes
   useEffect(() => {
+    setIsTransitioning(true);
     const timer = setTimeout(() => {
       setIsTransitioning(false);
-    }, 600);
+    }, 600); // Animation duration
     return () => clearTimeout(timer);
   }, [currentSlide]);
 
   // Auto-advance slides
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!isTransitioning) {
-        nextSlide();
-      }
-    }, 6000);
+      nextSlide();
+    }, 6000); // Change slide every 6 seconds
     return () => clearInterval(interval);
-  }, [isTransitioning]);
+  }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Images */}
+      {/* Background Images with Ken Burns Effect */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-all duration-1200 ease-out ${index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
-              }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
           >
             <img
               src={slide.image}
               alt={slide.title}
-              className="h-full w-full object-cover"
+              className={`h-full w-full object-cover transition-transform duration-[7000ms] ease-out ${
+                index === currentSlide ? 'scale-110' : 'scale-100'
+              }`}
             />
-            <div className="absolute inset-0 bg-arch-black/40" />
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/50" />
           </div>
         ))}
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 flex h-full items-center justify-center">
-        <div className="text-center text-white max-w-4xl px-4">
-          {/* <div className="overflow-hidden">
-            <p 
-              className={`text-sm font-light tracking-widest uppercase mb-4 transition-all duration-1500 delay-100 ${
-                isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
-              }`}
-            >
-              {slides[currentSlide].location}
+      <div className="relative z-10 flex h-full items-center justify-start">
+        <motion.div
+          key={currentSlide}
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer(0.08)}
+          className="max-w-4xl px-8 md:px-16 lg:px-24 text-left text-white"
+        >
+          <motion.div variants={fadeInUp} className="overflow-hidden">
+            <p className="text-sm font-semibold tracking-wider text-amber-400 mb-4">
+              {slides[currentSlide].topSubheading}
             </p>
-          </div> */}
+          </motion.div>
 
-          <div className="overflow-hidden">
-            <h1
-              className={`text-4xl md:text-7xl font-light tracking-wide leading-tight mb-6 transition-all duration-1500 delay-200 ${isTransitioning ? 'translate-y-12 opacity-0' : 'translate-y-0 opacity-100'
-                }`}
-            >
+          <motion.div variants={fadeInUp} className="overflow-hidden">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-4">
               {slides[currentSlide].title}
             </h1>
-          </div>
+          </motion.div>
 
-          <div className="overflow-hidden">
-            <p
-              className={`text-lg font-light tracking-wide mb-8 transition-all duration-1500 delay-400 ${isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
-                }`}
-            >
-              {slides[currentSlide].subtitle}
+          <motion.div variants={fadeInUp} className="overflow-hidden">
+            <p className="text-xl italic font-light text-gray-200 mb-8">
+              {slides[currentSlide].bottomSubheading}
             </p>
-          </div>
+          </motion.div>
 
-          <div className={`transition-all duration-1500 delay-700 ${isTransitioning ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
-            }`}>
-            <Button variant="arch-outline" size="arch">
-              EXPLORE IT
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation Controls */}
-      <div className="absolute left-6 top-1/2 -translate-y-1/2 z-20">
-        <button
-          onClick={prevSlide}
-          className="p-3 text-white/70 hover:text-white arch-transition disabled:opacity-50"
-          disabled={isTransitioning}
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </button>
-      </div>
-
-      <div className="absolute right-6 top-1/2 -translate-y-1/2 z-20">
-        <button
-          onClick={nextSlide}
-          className="p-3 text-white/70 hover:text-white arch-transition disabled:opacity-50"
-          disabled={isTransitioning}
-        >
-          <ChevronRight className="h-6 w-6" />
-        </button>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-8 right-8 flex space-x-4 z-20">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className="group flex items-center space-x-2"
-            disabled={isTransitioning}
+          <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            {/* NOTE: You may need to create these button variants or style them with classes */}
+            <Button
+            className="bg-gradient-to-r from-accent to-orange-500 text-white px-8 py-3 rounded-3xl font-semibold transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl"
           >
-            <span className="text-white/70 text-xs font-light">
-              {String(index + 1).padStart(2, '0')}
-            </span>
-            <div
-              className={`h-px transition-all duration-300 ${index === currentSlide
-                  ? 'w-8 bg-white'
-                  : 'w-4 bg-white/50 group-hover:bg-white/70'
-                }`}
-            />
-          </button>
-        ))}
+            View Our Projects
+          </Button>
+          </motion.div>
+        </motion.div>
       </div>
 
-      {/* Slide Counter */}
-      <div className="absolute bottom-8 left-8 text-white z-20">
-        <div className="flex items-center space-x-4">
-          <div className="arch-line bg-white/70" />
-          <span className="text-xs font-light tracking-wider">
-            {String(currentSlide + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}
-          </span>
-        </div>
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex animate-bounce flex-col items-center gap-2">
+        <span className="text-xs font-light tracking-widest text-white/80">SCROLL</span>
+        <ChevronDown className="h-4 w-4 text-white/80" />
       </div>
     </section>
   );

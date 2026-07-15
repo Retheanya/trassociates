@@ -3,6 +3,7 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { EnquiryDialog } from '@/components/EnquiryDialog';
 import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
 import galleryImg from '@/assets/gallery.jpg';
 import gallery1 from '@/assets/gallery1.jpeg';
 import gallery2 from '@/assets/gallery2.jpeg';
@@ -43,6 +44,7 @@ import g17 from '@/assets/g17.jpeg';
 const Gallery = () => {
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const galleryImages = [
     { src: gallery1, title: 'Architectural Planning' },
@@ -111,9 +113,7 @@ const Gallery = () => {
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="relative aspect-[4/3] overflow-hidden group cursor-pointer"
-                onMouseEnter={() => setHoveredImage(index)}
-                onMouseLeave={() => setHoveredImage(null)}
+                className="relative aspect-[4/3] overflow-hidden group cursor-pointer rounded-[1.75rem] shadow-lg"
               >
                 <img
                   src={image.src}
@@ -122,24 +122,53 @@ const Gallery = () => {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-center">
-                    <h3 className="text-white text-2xl font-light tracking-wide mb-4">
-                      {image.title}
-                    </h3>
-                    <Button
-                      variant="arch-outline"
-                      onClick={() => setEnquiryOpen(true)}
-                    >
-                      Enquire Now
-                    </Button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedImage(index)}
+                  className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6"
+                >
+                  <div className="bg-white/10 backdrop-blur-xl rounded-3xl px-5 py-4 max-w-xs">
+                    <p className="text-sm uppercase tracking-[0.35em] text-[hsl(var(--brand-orange))] mb-2">View Project</p>
+                    <h3 className="text-xl font-semibold text-white leading-snug">{image.title}</h3>
                   </div>
-                </div>
+                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {selectedImage !== null && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-6">
+          <div className="relative max-w-6xl w-full">
+            <button
+              type="button"
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 z-10 rounded-full bg-white/10 p-3 text-white hover:bg-white/20 transition"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src={galleryImages[selectedImage].src}
+                alt={galleryImages[selectedImage].title}
+                className="w-full h-auto max-h-[80vh] object-cover"
+              />
+              <div className="p-6 bg-[#111111]">
+                <h3 className="text-3xl font-semibold text-white">{galleryImages[selectedImage].title}</h3>
+                <p className="mt-3 text-white/75 max-w-2xl">
+                  Explore this project in more detail. Click the enquiry button below to get a quote or ask about our process.
+                </p>
+                <div className="mt-6">
+                  <Button variant="arch" onClick={() => setEnquiryOpen(true)}>
+                    Enquire Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
       

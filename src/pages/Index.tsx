@@ -16,6 +16,8 @@ import { ProprietorSection } from '@/components/ProprietorSection';
 import CustomerLogos from '@/components/Customerlogo';
 import client1 from '@/assets/client1.jpg';
 import client2 from '@/assets/client2.jpg';
+import { HomeServices } from '@/components/HomeService';
+import { GalleryOverview } from '@/components/GarlleryOverview';
 
 const Index = () => {
 
@@ -23,25 +25,32 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Revolution Slider */}
       <HeroSlider />
 
+      <AboutSection />
+
+      <HomeServices />
+
+      <GalleryOverview />
+
+
+      
       {/* Projects Section */}
-      <ServicesSection />
       {/* Split Screen Layout */}
-      <div className="flex flex-col lg:flex-row min-h-screen lg:h-screen">
+      {/* <div className="flex flex-col lg:flex-row min-h-screen lg:h-screen"> */}
         {/* Left Half - Image Slider */}
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-full relative">
+        {/* <div className="w-full lg:w-1/2 h-[50vh] lg:h-full relative">
           <ImageSlider />
-        </div>
+        </div> */}
 
         {/* Right Half - Content Panel */}
-        <div className="w-full lg:w-1/2 min-h-[50vh] lg:h-full relative">
+        {/* <div className="w-full lg:w-1/2 min-h-[50vh] lg:h-full relative">
           <ContentPanel />
         </div>
-      </div>
+      </div> */}
 
       {/* Video Section */}
+      
       {/* About Section */}
 
       {/* Certificates Section */}

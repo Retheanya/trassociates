@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import servicesData from '@/data/services.json';
 import { getImageFromName } from '@/utils/imageMapper';
 import { Building2, HardHat, FileText, MapPin, TestTube, Home, Shield, Factory, ClipboardCheck, IndianRupee as RupeeIcon, ShieldCheck, Award } from 'lucide-react';
+import { fadeIn, fadeInUp, staggerContainer } from '@/lib/motion';
 
 // Map service titles to icons
 const iconMap: Record<string, typeof Building2> = {
@@ -29,29 +31,37 @@ const projects = servicesData.projects.map(project => ({
 
 export const ServicesSection = () => {
   return (
-    <section className="py-12 md:py-20 bg-content-light">
+    <motion.section
+      variants={staggerContainer(0.12)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="py-12 md:py-20 bg-content-light"
+    >
       <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-16 animate-fade-in-up">
+        <motion.div variants={fadeInUp} className="text-center mb-10 md:mb-16">
           <p className="text-xs sm:text-sm font-light tracking-widest uppercase text-arch-medium mb-3 sm:mb-4">
             WE STAND FOR
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-light tracking-wide text-arch-black leading-tight">
             Having an idea. Creating spaces.
           </h2>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
-              <div
+              <motion.div
                 key={project.id}
-                className="group cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 150}ms` }}
+                variants={fadeInUp}
+                className="group cursor-pointer"
+                transition={{ duration: 0.55, delay: index * 0.08 }}
+                whileHover={{ y: -6, scale: 1.01 }}
               >
-                <div className="relative overflow-hidden bg-white">
+                <div className="relative overflow-hidden bg-white rounded-[2rem] shadow-lg border border-arch-light/80">
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <img
                       src={project.image}
@@ -85,7 +95,7 @@ export const ServicesSection = () => {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
@@ -97,6 +107,6 @@ export const ServicesSection = () => {
           </Button>
         </div> */}
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import ServiceDetail from "./pages/ServiceDetail";
 import Capabilities from "./pages/Capabilities";
+import ScrollToTop from "./components/ui/ScrollToTop";
 import NotFound from "./pages/NotFound";
 
 import { FloatingContact } from "./components/FloatingContact";
@@ -23,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />

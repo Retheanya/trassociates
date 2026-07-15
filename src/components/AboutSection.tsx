@@ -1,248 +1,119 @@
 import { Award, Target, Users, Heart, TrendingUp, Clock, IndianRupee, ThumbsUp } from 'lucide-react';
-import aboutImg from '@/assets/about.jpg';
-import archInterior1 from '@/assets/arch-interior-1.jpg';
-import whyUsBg from '@/assets/whyus.jpg';
+import { motion } from 'framer-motion';
+import { fadeIn, fadeInUp, staggerContainer } from '@/lib/motion';
+import archInterior1 from '@/assets/gallery7.jpeg';
 
-const values = [
-  {
-    icon: Target,
-    title: 'Excellence',
-    description: 'We strive for perfection in every project, delivering superior quality and outstanding results.'
-  },
-  {
-    icon: Users,
-    title: 'Collaboration',
-    description: 'Building strong relationships with clients, partners, and communities to achieve shared success.'
-  },
-  {
-    icon: Heart,
-    title: 'Integrity',
-    description: 'Operating with honesty, transparency, and ethical practices in all our endeavors.'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Innovation',
-    description: 'Embracing cutting-edge technologies and creative solutions to stay ahead of the curve.'
-  }
+const features = [
+  { icon: Target, title: 'Quality', description: 'ISI-certified materials and expert craftsmanship in every project' },
+  { icon: Heart, title: 'Integrity', description: 'Transparent pricing with no hidden costs throughout the process' },
+  { icon: TrendingUp, title: 'Innovation', description: 'Modern construction techniques and contemporary designs' },
+  { icon: Users, title: 'Transparency', description: 'Regular updates and open communication at every stage' }
 ];
 
 const stats = [
   { number: '10+', label: 'Years Experience' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '120+', label: 'Happy Clients' },
-  { number: '30+', label: 'Expert Team Members' }
+  { number: '25+', label: 'Projects Completed' },
+  { number: '16', label: 'New Buildings' },
+  { number: '9', label: 'Renovations' }
 ];
 
 export const AboutSection = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-content-light to-white overflow-hidden">
-      <div className="container mx-auto px-6">
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-          {/* Left Side - Image with Overlay Text */}
-          <div className="relative group">
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <img
-                src={aboutImg}
-                alt="About Us"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-arch-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
-            </div>
-
-            {/* Floating Stats Card */}
-            <div className="absolute -bottom-8 -right-8 bg-white shadow-2xl p-8 w-64 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <div className="flex items-center gap-4 mb-4">
-                <Clock className="w-8 h-8 text-arch-accent" />
-                <div>
-                  <div className="text-3xl font-light text-arch-black">10+</div>
-                  <div className="text-xs font-light tracking-widest uppercase text-arch-medium">Years</div>
-                </div>
-              </div>
-              <div className="arch-line" />
-              <p className="text-sm font-light text-arch-medium mt-4">
-                Delivering excellence since 2012
-              </p>
-            </div>
+    <motion.section
+      variants={staggerContainer(0.15)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="py-20 bg-white"
+    >
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header */}
+        <motion.div variants={fadeInUp} className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-arch-black">About <span className="inline-flex items-baseline gap-0">
+            
+            <span className="ml-2 font-bold">TR Associates</span>
+          </span></h2>
+          <p className="text-lg text-arch-medium mt-3">10+ years of expertise in residential, commercial, and hill station construction across Coimbatore, Ooty, Coonoor, Tiruppur & Pollachi.</p>
+          <div className="flex items-center justify-center gap-2 mt-6">
+            <div className="w-10 h-1 bg-arch-accent rounded" />
+            <div className="w-6 h-1 bg-green-500 rounded" />
           </div>
+        </motion.div>
 
-          {/* Right Side - Content */}
-          <div className="flex flex-col justify-center space-y-8 animate-fade-in-up">
-            <div>
-              <p className="text-sm font-light tracking-widest uppercase text-arch-medium mb-4">
-                ABOUT US
+        {/* Main two-column layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* Left: description + features */}
+          <div className="space-y-6">
+            <div className="prose max-w-none text-arch-medium">
+              <p>
+                <span className="font-bold">TR ASSOCIATES</span> is a Coimbatore-based construction company with over 10 years of experience delivering residential, commercial, and renovation projects. With 25+ completed projects including 16 new buildings and 9 renovations, we have built a strong reputation for quality and reliability.
               </p>
-              <div className="arch-line mb-6" />
-              <h2 className="text-4xl md:text-5xl font-light tracking-wide text-arch-black mb-6">
-                Leading Consultants &
-                <span className="block text-arch-accent">Planning Today</span>
-              </h2>
-              <p className="text-base font-light leading-relaxed text-arch-medium mb-6">
-                TR ASSOCIATES is an engineering and consultancy firm established in 2015 in Coimbatore, with a growing presence across Tamil Nadu. We provide end to end planning, design, and approval solutions for infrastructure projects, specializing in statutory clearances, structural and geotechnical engineering, LiDAR/GIS surveys, value engineering, structural peer review, and concrete Non Destructive Testing (NDT). Our mission is to simplify the process for clients developing infrastructure in Tamil Nadu, offering one stop, collaboration driven services from approvals to integrated construction and MEP systems.
+              <p className="leading-relaxed">
+                We specialize in high-risk hill station construction across the Nilgiris — including bungalow renovations, school buildings in Ooty, Wellington and Kothagiri. Our notable projects include major clients like NKP Textile and Velammal Ology School.
               </p>
-              <p className="text-base font-light leading-relaxed text-arch-medium">
-                We the consultants registered with the government for the services we offered for our clients  the and you can trust/rely on our efficient services. From initiation of the project to successful completion of the projects, we assure our expert workforce/team  provides best suitable possible infrastructure development of all your needs.
+              <p className="leading-relaxed">
+                From residential homes to commercial spaces, renovation to waterproofing solutions — <span className="font-bold">TR ASSOCIATES</span> provides end-to-end construction services with transparent pricing and quality craftsmanship.
               </p>
             </div>
-          </div>
-        </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <div
-              key={stat.label}
-              className="text-center p-6 bg-white/50 backdrop-blur-sm border border-arch-black/10 hover:border-arch-accent/30 arch-transition animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="text-4xl md:text-5xl font-light text-arch-black mb-2">
-                {stat.number}
-              </div>
-              <div className="text-xs font-light tracking-widest uppercase text-arch-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Values Section */}
-      </div>
-
-      <div className="relative bg-content-light py-16 md:py-20">
-        <div className="container mx-auto px-6">
-          {/* Background Image */}
-          <div className="absolute inset-0 opacity-10">
-            <img
-              src={archInterior1}
-              alt="Values"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="relative bg-white/80 backdrop-blur-sm p-12 md:p-16">
-            <div className="text-center mb-12">
-              <p className="text-sm font-light tracking-widest uppercase text-arch-medium mb-4">
-                OUR VALUES
-              </p>
-              <h3 className="text-3xl md:text-4xl font-light tracking-wide text-arch-black">
-                What Drives Us Forward
-              </h3>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => {
-                const Icon = value.icon;
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+              {features.map((f, i) => {
+                const Icon = f.icon;
                 return (
-                  <div
-                    key={value.title}
-                    className="group text-center animate-fade-in"
-                    style={{ animationDelay: `${index * 150}ms` }}
+                  <motion.div
+                    key={f.title}
+                    variants={fadeIn}
+                    className="flex items-start gap-4 rounded-3xl border border-arch-light/70 bg-[#fffaf0] p-4 shadow-sm"
                   >
-                    <div className="flex justify-center mb-6">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-arch-accent/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300" />
-                        <div className="relative bg-white p-6 rounded-full shadow-lg group-hover:shadow-xl arch-transition">
-                          <Icon className="w-8 h-8 text-arch-accent group-hover:scale-110 arch-transition" />
-                        </div>
+                      <div className="flex-shrink-0 bg-white p-3 rounded-2xl shadow-sm">
+                        <Icon className="w-6 h-6 text-[hsl(var(--brand-green))]" />
                       </div>
-                    </div>
-                    <h4 className="text-xl font-light tracking-wide text-arch-black mb-3">
-                      {value.title}
-                    </h4>
-                    <p className="text-sm font-light leading-relaxed text-arch-medium">
-                      {value.description}
-                    </p>
-                  </div>
+                      <div>
+                        <div className="font-semibold text-arch-black text-base">{f.title}</div>
+                        <div className="text-base text-arch-medium">{f.description}</div>
+                      </div>
+                  </motion.div>
                 );
               })}
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Why Us Section - Redesigned Split Layout */}
-      <div className="container mx-auto px-6 py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side - Image */}
-          <div className="relative group animate-slide-in-left">
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <img
-                src={whyUsBg}
-                alt="Why Us"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-arch-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+          {/* Right: Stats grid + video */}
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((s) => (
+                <motion.div
+                  key={s.label}
+                  variants={fadeInUp}
+                  className="bg-[#f6efe9] rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm"
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-[hsl(var(--brand-orange))]">{s.number}</div>
+                  <div className="text-sm md:text-base text-arch-medium mt-2">{s.label}</div>
+                </motion.div>
+              ))}
             </div>
 
-            {/* Minimal Decorative Badge */}
-            <div className="absolute -top-4 -left-4 bg-arch-accent px-6 py-4 shadow-xl animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-              <div className="text-white text-lg font-light">Trusted</div>
-            </div>
-          </div>
-
-          {/* Right Side - Content Cards Stacked */}
-          <div className="flex flex-col space-y-8">
-            <div className="relative animate-slide-in-right">
-              <p className="text-sm font-light text-arch-medium mb-4">
-                Choose excellence
-              </p>
-              <div className="arch-line mb-6" />
-              <h3 className="text-4xl md:text-5xl font-light tracking-wide text-arch-black mb-6">
-                Why Us
-              </h3>
-            </div>
-
-            <div className="space-y-6">
-              {/* Card 1 */}
-              <div className="group bg-white p-8 border-l-4 border-transparent hover:border-arch-accent shadow-sm hover:shadow-xl arch-transition flex items-center gap-8 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-                <div className="flex-shrink-0 bg-arch-accent/10 p-4 rounded-full group-hover:bg-arch-accent group-hover:text-white transition-all duration-300">
-                  <Users className="w-6 h-6 text-arch-accent group-hover:text-white" />
-                </div>
-                <p className="text-base font-light leading-relaxed text-arch-medium">
-                  Experienced professionals and industry experts
-                </p>
-              </div>
-
-              {/* Card 2 */}
-              <div className="group bg-white p-8 border-l-4 border-transparent hover:border-arch-accent shadow-sm hover:shadow-xl arch-transition flex items-center gap-8 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-                <div className="flex-shrink-0 bg-arch-accent/10 p-4 rounded-full group-hover:bg-arch-accent group-hover:text-white transition-all duration-300">
-                  <IndianRupee className="w-6 h-6 text-arch-accent group-hover:text-white" />
-                </div>
-                <p className="text-base font-light leading-relaxed text-arch-medium">
-                  Services at competitive charges & no hidden charges.
-                </p>
-              </div>
-
-              {/* Card 3 */}
-              <div className="group bg-white p-8 border-l-4 border-transparent hover:border-arch-accent shadow-sm hover:shadow-xl arch-transition flex items-center gap-8 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-                <div className="flex-shrink-0 bg-arch-accent/10 p-4 rounded-full group-hover:bg-arch-accent group-hover:text-white transition-all duration-300">
-                  <ThumbsUp className="w-6 h-6 text-arch-accent group-hover:text-white" />
-                </div>
-                <p className="text-base font-light leading-relaxed text-arch-medium">
-                  Trusted valuation based on reliable developed data system.
-                </p>
+            <div className="mt-4">
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={archInterior1}
+                  alt="TR Associates construction work"
+                  className="w-full h-56 md:h-64 object-cover"
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Mission Statement */}
-      <div className="container mx-auto px-6">
-        <div className="mt-20 text-center max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-          <div className="inline-block mb-8">
-            <Award className="w-16 h-16 text-arch-accent mx-auto mb-4" />
-            <div className="arch-line mx-auto" />
-          </div>
-          <blockquote className="text-2xl md:text-3xl font-light tracking-wide text-arch-black italic mb-6">
+        {/* Callout / mission */}
+        <motion.div variants={fadeInUp} className="mt-12 text-center">
+          <blockquote className="text-2xl md:text-3xl font-light text-arch-black italic">
             "We Believe In Serving You The Safe And Aesthetic Infrastructure Development"
           </blockquote>
-          <p className="text-sm font-light tracking-widest uppercase text-arch-medium">
-            — TR Associates
-          </p>
-        </div>
+          <p className="text-sm text-arch-medium text-black mt-2">— <span className="font-bold"><span className="font-bold text-black">T</span><span className="font-bold text-black">R</span> Associates</span></p>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
