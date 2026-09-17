@@ -42,9 +42,9 @@ export const FloatingContact = () => {
 
             <div>
               <h4 className="text-[#333333] text-lg font-medium mb-3">Mail Us</h4>
-              <a href="mailto:design@tr-associates.in" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
+              <a href="mailto:tn.trassociates@gmail.com" className="flex items-center gap-2 text-[#777777] hover:text-arch-accent transition-colors text-sm">
                 <Mail className="w-3.5 h-3.5" />
-                design@tr-associates.in
+                tn.trassociates@gmail.com
               </a>
             </div>
 

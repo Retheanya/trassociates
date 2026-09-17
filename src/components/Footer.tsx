@@ -78,10 +78,10 @@ export const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-arch-accent" />
                   <a
-                    href="mailto:design@tr-associates.in"
+                    href="mailto:tn.trassociates@gmail.com"
                     className="text-arch-light hover:text-white arch-transition"
                   >
-                    design@tr-associates.in
+                    tn.trassociates@gmail.com
                   </a>
                 </div>
               </div>
@@ -92,8 +92,8 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col justify-center items-center space-y-4">
           <p className="text-arch-light font-light text-sm">
-            © 2025 TR Associates. All rights reserved.
-          </p>
+  © {new Date().getFullYear()} TR Associates®. All rights reserved.
+</p>
           <div className="flex items-center space-x-1.5 text-arch-light font-light text-sm">
             <span>Made with</span>
             <Heart className="h-3.5 w-3.5 text-white fill-white animate-pulse" />

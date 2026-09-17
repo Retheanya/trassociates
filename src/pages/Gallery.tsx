@@ -5,7 +5,6 @@ import { EnquiryDialog } from '@/components/EnquiryDialog';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
 import galleryImg from '@/assets/gallery.jpg';
-import gallery1 from '@/assets/gallery1.jpeg';
 import gallery2 from '@/assets/gallery2.jpeg';
 import gallery3 from '@/assets/gallery3.jpeg';
 import gallery4 from '@/assets/gallery4.jpeg';
@@ -47,7 +46,6 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const galleryImages = [
-    { src: gallery1, title: 'Architectural Planning' },
     { src: gallery2, title: 'Structural Design' },
     { src: gallery3, title: 'Exterior Elevation' },
     { src: gallery4, title: 'Interior Concept' },

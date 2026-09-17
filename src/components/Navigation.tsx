@@ -53,16 +53,21 @@ export const Navigation = () => {
         scrolled ? 'bg-white shadow-md' : 'bg-black/20 backdrop-blur-sm'
       }`}
     >
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 md:px-8 py-3">
+      <div className="max-w-screen-[90rem] mx-auto flex items-center justify-between px-4 md:px-20 -mb-3 -mt-[0.3rem] ">
         {/* Logo Section */}
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="TR Associates Logo" className="h-[5rem] w-24 object-contain" />
+          <img src={logo} alt="TR Associates Logo" className="h-[8rem] w-28 object-contain" />
           <div className="hidden sm:flex flex-col">
-            <h1 className={`text-xl font-bold tracking-tight leading-tight transition-colors duration-300 ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-              TR ASSOCIATES
-            </h1>
+            <h1
+  className={`text-4xl font-bold tracking-tight leading-tight transition-colors duration-300 ${
+    scrolled ? "text-gray-900" : "text-white"
+  }`}
+>
+  TR ASSOCIATES
+  <sup className="ml-1 text-base align-top">®</sup>
+</h1>
             <span className={`text-[10px] uppercase tracking-widest transition-colors duration-300 ${scrolled ? 'text-gray-500' : 'text-gray-200'}`}>
-              Engineering & Consultation
+              Engineers & Consultants
             </span>
           </div>
         </Link>

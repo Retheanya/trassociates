@@ -2,7 +2,6 @@ import { Navigation } from '@/components/Navigation';
 import { ImageSlider } from '@/components/ImageSlider';
 import { ContentPanel } from '@/components/ContentPanel';
 import { HeroSlider } from '@/components/HeroSlider';
-import { ServicesSection } from '@/components/ServicesSection';
 import { VideoSection } from '@/components/VideoSection';
 import { AboutSection } from '@/components/AboutSection';
 import { AmbitiousClients } from '@/components/AmbitiousClients';
@@ -18,6 +17,7 @@ import client1 from '@/assets/client1.jpg';
 import client2 from '@/assets/client2.jpg';
 import { HomeServices } from '@/components/HomeService';
 import { GalleryOverview } from '@/components/GarlleryOverview';
+import {HomeServiceSection} from '@/components/HomeServiceSection';
 
 const Index = () => {
 
@@ -29,9 +29,11 @@ const Index = () => {
 
       <AboutSection />
 
-      <HomeServices />
+      {/* <HomeServices /> */}
 
       <GalleryOverview />
+
+      <HomeServiceSection />
 
 
       
@@ -67,7 +69,7 @@ const Index = () => {
       </section> */}
 
       {/* Testimonials Section */}
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
 
       {/* Foundation Section */}
 

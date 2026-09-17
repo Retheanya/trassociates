@@ -241,7 +241,7 @@ const About = () => {
       <div className="pt-24 bg-gray-50">
         <div className="container mx-auto px-6 text-center mb-12">
           <h2 className="text-sm font-bold text-green-600 tracking-[0.3em] uppercase mb-4">LEADERSHIP</h2>
-          <h3 className="text-4xl font-bold text-arch-black">Meet Our Proprietor</h3>
+          <h3 className="text-4xl font-bold text-arch-black">Meet Our Founder</h3>
         </div>
       </div>
       <ProprietorSection />

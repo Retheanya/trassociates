@@ -33,9 +33,9 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Using Formspree for direct email delivery to design@tr-associates.in
+      // Using Formspree for direct email delivery to tn.trassociates@gmail.com
       // Note: You will need to verify your email at formspree.io after the first submission
-      const FORMSPREE_ENDPOINT = "https://formspree.io/f/design@tr-associates.in"; 
+      const FORMSPREE_ENDPOINT = "https://formspree.io/f/tn.trassociates@gmail.com"; 
       
       const response = await axios.post(FORMSPREE_ENDPOINT, formData, {
         headers: {
@@ -67,7 +67,7 @@ const Contact = () => {
       });
       
       // Fallback: Open local email client if API fails
-      const mailtoLink = `mailto:design@tr-associates.in?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`)}`;
+      const mailtoLink = `mailto:tn.trassociates@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`)}`;
       window.location.href = mailtoLink;
     } finally {
       setIsSubmitting(false);
@@ -189,7 +189,7 @@ const Contact = () => {
                   <div>
                     <div className="flex items-center space-x-4 mb-4">
                       <MapPin className="h-5 w-5 text-arch-accent" />
-                      <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">CORPORATE ADDRESS</h4>
+                      <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">Registered Office</h4>
                     </div>
                     <div className="ml-9">
                       <address className="text-arch-medium font-light not-italic leading-relaxed">
@@ -223,24 +223,26 @@ const Contact = () => {
                   <div>
                     <div className="flex items-center space-x-4 mb-4">
                       <Mail className="h-5 w-5 text-arch-accent" />
-                      <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">EMAIL / WEBSITE</h4>
+                      <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">EMAIL</h4>
                     </div>
                     <div className="space-y-2 ml-9">
-                      <a href="mailto:design@tr-associates.in" className="block text-arch-medium hover:text-arch-black arch-transition">
-                        design@tr-associates.in
+                      <a href="mailto:tn.trassociates@gmail.com" className="block text-arch-medium hover:text-arch-black arch-transition">
+                        tn.trassociates@gmail.com
                       </a>
                     </div>
                   </div>
                 </div>
 
                 {/* Logo Section */}
-                <div className="flex-shrink-0 md:ml-8 lg:ml-12">
-                  <img 
-                    src={trLogo} 
-                    alt="TR Associates Logo" 
-                    className="w-48 h-auto object-contain opacity-80"
-                  />
-                </div>
+               <div className="flex-shrink-0 md:ml-8 lg:ml-12">
+  <img
+    src={trLogo}
+    alt="TR Associates Logo"
+    className="w-48 h-auto object-contain opacity-80 select-none"
+    onContextMenu={(e) => e.preventDefault()}
+    draggable={false}
+  />
+</div>
               </div>
             </div>
           </div>
@@ -282,7 +284,7 @@ const Contact = () => {
               </div>
 
               {/* General Enquiries */}
-              <div>
+              {/* <div>
                 <div className="flex items-center space-x-4 mb-4">
                   <Mail className="h-5 w-5 text-arch-accent" />
                   <h4 className="text-lg font-light tracking-wide text-arch-black uppercase">General enquiries</h4>
@@ -295,7 +297,7 @@ const Contact = () => {
                     www.tr-associates.in
                   </a>
                 </div>
-              </div>
+              </div> */}
 
               {/* Call Us */}
               <div>
@@ -306,7 +308,7 @@ const Contact = () => {
                 <div className="ml-9 text-arch-medium font-light">
                   <div className="flex items-center space-x-3">
                     <span className="text-xs uppercase tracking-wider text-arch-medium/50 w-16">Mobile</span>
-                    <a href="tel:+919486112301" className="hover:text-arch-black arch-transition">+91 9486112301</a>
+                    <a href="tel:+919042514845" className="hover:text-arch-black arch-transition">+91 9042514845</a>
                   </div>
                 </div>
               </div>
